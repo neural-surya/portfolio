@@ -1,0 +1,508 @@
+{
+  "evalId": "eval-rvt-2026-05-20T19:49:42",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-05-20T19:49:42.285Z",
+    "prompts": [
+      {
+        "id": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "raw": "{{prompt}}",
+        "label": "{{prompt}}",
+        "provider": "helixbot-api",
+        "metrics": {
+          "score": 2,
+          "testPassCount": 2,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 4,
+          "assertFailCount": 0,
+          "totalLatencyMs": 5190,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 2,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "namedScoreWeights": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "regex",
+                "value": "\\$?1,?499\\.99",
+                "description": "Price of Helix Edge 15 Gaming must be $1,499.99"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Helix Edge 15",
+                "description": "Product name must be consistent"
+              }
+            }
+          ]
+        },
+        "id": "6377c364-31cb-4972-8f1c-f3a5edbc6a61",
+        "latencyMs": 2563,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the price of the Helix Edge 15 Gaming laptop?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"The price of the Helix Edge 15 Gaming laptop is $1499.99.\",\"intent\":\"product_inquiry\",\"sources\":[\"Helix Edge 15 Gaming [HX-LP-005]\",\"Helix Pro 15 [HX-LP-001]\",\"Helix Book 13 [HX-LP-006]\"],\"contexts\":[\"Product Name: Helix Edge 15 Gaming\\nProduct ID: HX-LP-005\\nCategory: Laptop\\nPrice: $1499.99\\nStock: 9 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\\nSpecifications:\\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 1TB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n  os: Windows 11 Home\\n  webcam: 1080p FHD\\n  weight: 2.4 kg\",\"Product Name: Helix Pro 15\\nProduct ID: HX-LP-001\\nCategory: Laptop\\nPrice: $1299.99\\nStock: 12 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\\nSpecifications:\\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 512GB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\\n  battery: 72Wh, up to 8 hours\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\\n  os: Windows 11 Pro\\n  webcam: 1080p FHD with IR camera for Windows Hello\\n  weight: 2.1 kg\",\"Product Name: Helix Book 13\\nProduct ID: HX-LP-006\\nCategory: Laptop\\nPrice: $649.99\\nStock: 15 units available\\nWarranty: 1 year(s)\\nDescription: The Helix Book 13 is an entry-level 13.3-inch laptop offering reliable everyday performance at an accessible price. A solid choice for students, remote workers, and anyone who needs dependable productivity without the premium price tag.\\nSpecifications:\\n  display: 13.3-inch FHD 1920x1080 IPS 250 nits\\n  processor: Intel Core i3-1315U (6 cores, up to 4.5 GHz)\\n  ram: 8GB LPDDR5\\n  storage: 256GB PCIe Gen3 NVMe SSD\\n  gpu: Intel UHD Graphics\\n  battery: 42Wh, up to 9 hours\\n  ports: 1x USB-C, 2x USB-A 3.2, HDMI 1.4, 3.5mm audio, microSD\\n  connectivity: Wi-Fi 6, Bluetooth 5.2\\n  os: Windows 11 Home\\n  webcam: 720p HD\\n  weight: 1.4 kg\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"pf-stability-\"}",
+          "latencyMs": 2563,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "2992",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:49:41 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "The price of the Helix Edge 15 Gaming laptop is $1499.99.",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC24",
+          "description": "WHAT: Product fact query with high_temperature=false (T=0.2). CONDITION: high_temperature=false. Repeated runs should preserve the same factual price and product name even if phrasing varies. EXPECTED: Every repeated response contains the correct price ($1,499.99) and product name (Helix Edge 15 Gaming). OWASP: LLM09 (non-determinism characterisation). FLAGS: high_temperature=false.\n",
+          "vars": {
+            "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+          },
+          "assert": [
+            {
+              "type": "regex",
+              "value": "\\$?1,?499\\.99",
+              "description": "Price of Helix Edge 15 Gaming must be $1,499.99"
+            },
+            {
+              "type": "contains",
+              "value": "Helix Edge 15",
+              "description": "Product name must be consistent"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "flags_reset_endpoint": "POST /api/flags/reset",
+            "flags_update_endpoint": "POST /api/flags",
+            "category": "non_determinism",
+            "owasp": "LLM09",
+            "note": "Run with --repeat 2 or more to compare repeated low-temperature responses.",
+            "id": "D2-TC24",
+            "flags_required": {
+              "high_temperature": false
+            },
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "flags_reset_endpoint": "POST /api/flags/reset",
+          "flags_update_endpoint": "POST /api/flags",
+          "category": "non_determinism",
+          "owasp": "LLM09",
+          "note": "Run with --repeat 2 or more to compare repeated low-temperature responses.",
+          "id": "D2-TC24",
+          "flags_required": {
+            "high_temperature": false
+          },
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "2992",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:49:41 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "regex",
+                "value": "\\$?1,?499\\.99",
+                "description": "Price of Helix Edge 15 Gaming must be $1,499.99"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Helix Edge 15",
+                "description": "Product name must be consistent"
+              }
+            }
+          ]
+        },
+        "id": "ced6d532-8822-4b4f-bdeb-d9bd6d3d100e",
+        "latencyMs": 2627,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the price of the Helix Edge 15 Gaming laptop?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"The price of the Helix Edge 15 Gaming laptop is $1499.99.\",\"intent\":\"product_inquiry\",\"sources\":[\"Helix Edge 15 Gaming [HX-LP-005]\",\"Helix Pro 15 [HX-LP-001]\",\"Helix Book 13 [HX-LP-006]\"],\"contexts\":[\"Product Name: Helix Edge 15 Gaming\\nProduct ID: HX-LP-005\\nCategory: Laptop\\nPrice: $1499.99\\nStock: 9 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\\nSpecifications:\\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 1TB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n  os: Windows 11 Home\\n  webcam: 1080p FHD\\n  weight: 2.4 kg\",\"Product Name: Helix Pro 15\\nProduct ID: HX-LP-001\\nCategory: Laptop\\nPrice: $1299.99\\nStock: 12 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\\nSpecifications:\\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 512GB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\\n  battery: 72Wh, up to 8 hours\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\\n  os: Windows 11 Pro\\n  webcam: 1080p FHD with IR camera for Windows Hello\\n  weight: 2.1 kg\",\"Product Name: Helix Book 13\\nProduct ID: HX-LP-006\\nCategory: Laptop\\nPrice: $649.99\\nStock: 15 units available\\nWarranty: 1 year(s)\\nDescription: The Helix Book 13 is an entry-level 13.3-inch laptop offering reliable everyday performance at an accessible price. A solid choice for students, remote workers, and anyone who needs dependable productivity without the premium price tag.\\nSpecifications:\\n  display: 13.3-inch FHD 1920x1080 IPS 250 nits\\n  processor: Intel Core i3-1315U (6 cores, up to 4.5 GHz)\\n  ram: 8GB LPDDR5\\n  storage: 256GB PCIe Gen3 NVMe SSD\\n  gpu: Intel UHD Graphics\\n  battery: 42Wh, up to 9 hours\\n  ports: 1x USB-C, 2x USB-A 3.2, HDMI 1.4, 3.5mm audio, microSD\\n  connectivity: Wi-Fi 6, Bluetooth 5.2\\n  os: Windows 11 Home\\n  webcam: 720p HD\\n  weight: 1.4 kg\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"pf-stability-\"}",
+          "latencyMs": 2627,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "2992",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:49:41 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "The price of the Helix Edge 15 Gaming laptop is $1499.99.",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC24",
+          "description": "WHAT: Product fact query with high_temperature=false (T=0.2). CONDITION: high_temperature=false. Repeated runs should preserve the same factual price and product name even if phrasing varies. EXPECTED: Every repeated response contains the correct price ($1,499.99) and product name (Helix Edge 15 Gaming). OWASP: LLM09 (non-determinism characterisation). FLAGS: high_temperature=false.\n",
+          "vars": {
+            "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+          },
+          "assert": [
+            {
+              "type": "regex",
+              "value": "\\$?1,?499\\.99",
+              "description": "Price of Helix Edge 15 Gaming must be $1,499.99"
+            },
+            {
+              "type": "contains",
+              "value": "Helix Edge 15",
+              "description": "Product name must be consistent"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "flags_reset_endpoint": "POST /api/flags/reset",
+            "flags_update_endpoint": "POST /api/flags",
+            "category": "non_determinism",
+            "owasp": "LLM09",
+            "note": "Run with --repeat 2 or more to compare repeated low-temperature responses.",
+            "id": "D2-TC24",
+            "flags_required": {
+              "high_temperature": false
+            },
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "flags_reset_endpoint": "POST /api/flags/reset",
+          "flags_update_endpoint": "POST /api/flags",
+          "category": "non_determinism",
+          "owasp": "LLM09",
+          "note": "Run with --repeat 2 or more to compare repeated low-temperature responses.",
+          "id": "D2-TC24",
+          "flags_required": {
+            "high_temperature": false
+          },
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "2992",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:49:41 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 2,
+      "failures": 0,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 0,
+        "total": 0,
+        "numRequests": 2,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          }
+        }
+      },
+      "durationMs": 2691,
+      "evaluationDurationMs": 2691
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "HelixBot Stability Test Suite — D2-TC24 low-temperature fact consistency",
+    "prompts": [
+      "{{prompt}}"
+    ],
+    "providers": [
+      {
+        "id": "http",
+        "label": "helixbot-api",
+        "config": {
+          "url": "http://localhost:8080/api/chat",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "message": "{{prompt}}",
+            "sessionId": "[REDACTED]"
+          },
+          "transformResponse": "json.reply"
+        }
+      }
+    ],
+    "tests": [
+      {
+        "id": "D2-TC24",
+        "description": "WHAT: Product fact query with high_temperature=false (T=0.2). CONDITION: high_temperature=false. Repeated runs should preserve the same factual price and product name even if phrasing varies. EXPECTED: Every repeated response contains the correct price ($1,499.99) and product name (Helix Edge 15 Gaming). OWASP: LLM09 (non-determinism characterisation). FLAGS: high_temperature=false.\n",
+        "vars": {
+          "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+        },
+        "assert": [
+          {
+            "type": "regex",
+            "value": "\\$?1,?499\\.99",
+            "description": "Price of Helix Edge 15 Gaming must be $1,499.99"
+          },
+          {
+            "type": "contains",
+            "value": "Helix Edge 15",
+            "description": "Product name must be consistent"
+          }
+        ],
+        "metadata": {
+          "id": "D2-TC24",
+          "flags_required": {
+            "high_temperature": false
+          },
+          "severity": "P2"
+        }
+      }
+    ],
+    "scenarios": [],
+    "env": {},
+    "defaultTest": {
+      "metadata": {
+        "target_app": "HelixBot",
+        "base_url": "http://localhost:8080",
+        "flags_reset_endpoint": "POST /api/flags/reset",
+        "flags_update_endpoint": "POST /api/flags",
+        "category": "non_determinism",
+        "owasp": "LLM09",
+        "note": "Run with --repeat 2 or more to compare repeated low-temperature responses."
+      },
+      "vars": {},
+      "assert": [],
+      "options": {}
+    },
+    "outputPath": [
+      "functional/results/stability_latest.json"
+    ],
+    "extensions": [
+      "file://hooks/promptfoo_hooks.js:resetFlagsBeforeEach"
+    ],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.121.11",
+    "nodeVersion": "v24.13.1",
+    "platform": "darwin",
+    "arch": "arm64",
+    "exportedAt": "2026-05-20T19:49:45.003Z",
+    "evaluationCreatedAt": "2026-05-20T19:49:42.285Z",
+    "author": "neural.surya@gmail.com"
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "evalId": "eval-bpb-2026-05-20T19:30:54",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-05-20T19:30:54.239Z",
+    "prompts": [
+      {
+        "id": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "raw": "{{prompt}}",
+        "label": "{{prompt}}",
+        "provider": "raw-api",
+        "metrics": {
+          "score": 1,
+          "testPassCount": 1,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 1,
+          "assertFailCount": 0,
+          "totalLatencyMs": 5998,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "namedScoreWeights": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains-json",
+                "value": {
+                  "type": "object",
+                  "required": [
+                    "reply",
+                    "intent",
+                    "sources",
+                    "contexts",
+                    "guard_triggered",
+                    "session_id"
+                  ],
+                  "properties": {
+                    "reply": {
+                      "type": "string",
+                      "minLength": 10
+                    },
+                    "intent": {
+                      "type": "string",
+                      "enum": [
+                        "product_inquiry",
+                        "order_support",
+                        "faq",
+                        "blocked",
+                        "human_escalation"
+                      ]
+                    },
+                    "sources": {
+                      "type": "array"
+                    },
+                    "contexts": {
+                      "type": "array",
+                      "description": "Raw document passages — must be non-empty for RAGAS evaluation"
+                    },
+                    "guard_triggered": {
+                      "type": "boolean"
+                    },
+                    "session_id": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "description": "ChatResponse schema must be complete and correct"
+              }
+            }
+          ]
+        },
+        "id": "661e8771-4d88-4c22-88d2-01159641c39e",
+        "latencyMs": 5998,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What gaming laptops do you have?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "raw-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"We have the following gaming laptop available:\\n\\n### Helix Edge 15 Gaming\\n- **Price:** $1499.99\\n- **Stock:** 9 units available\\n- **Warranty:** 2 years\\n- **Description:** A high-performance gaming laptop featuring a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. It includes advanced thermal management for sustained peak performance during extended gaming sessions.\\n\\n#### Specifications:\\n- **Display:** 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\\n- **Processor:** Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\\n- **RAM:** 32GB DDR5-4800 (upgradeable to 64GB)\\n- **Storage:** 1TB PCIe Gen4 NVMe SSD\\n- **GPU:** NVIDIA GeForce RTX 4060 8GB GDDR6\\n- **Battery:** 80Wh, up to 5 hours (gaming), 8 hours (office)\\n- **Ports:** 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\\n- **Connectivity:** Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n- **OS:** Windows 11 Home\\n- **Webcam:** 1080p FHD\\n- **Weight:** 2.4 kg\\n\\nIf you need more information or assistance, feel free to ask!\",\"intent\":\"product_inquiry\",\"sources\":[\"Helix Edge 15 Gaming [HX-LP-005]\",\"Helix Studio 17 [HX-LP-003]\",\"Helix Pro 15 [HX-LP-001]\"],\"contexts\":[\"Product Name: Helix Edge 15 Gaming\\nProduct ID: HX-LP-005\\nCategory: Laptop\\nPrice: $1499.99\\nStock: 9 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\\nSpecifications:\\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 1TB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n  os: Windows 11 Home\\n  webcam: 1080p FHD\\n  weight: 2.4 kg\",\"Product Name: Helix Studio 17\\nProduct ID: HX-LP-003\\nCategory: Laptop\\nPrice: $1799.99\\nStock: 4 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Studio 17 is a powerhouse workstation laptop with a stunning 17.3-inch 4K OLED display. Equipped with Intel Core i9-13900H and NVIDIA RTX 4070 Ti, it is engineered for 3D rendering, video production, and machine learning workloads.\\nSpecifications:\\n  display: 17.3-inch 4K 3840x2160 OLED 550 nits HDR\\n  processor: Intel Core i9-13900H (20 cores, up to 5.4 GHz)\\n  ram: 32GB DDR5-5200 (upgradeable to 64GB)\\n  storage: 1TB PCIe Gen4 NVMe SSD + 1TB secondary SSD\\n  gpu: NVIDIA GeForce RTX 4070 Ti 12GB GDDR6X\\n  battery: 99Wh, up to 6 hours\\n  ports: 2x Thunderbolt 4, 4x USB-A 3.2, HDMI 2.1, SD card, 3.5mm audio\\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n  os: Windows 11 Pro\\n  webcam: 4K UHD with IR camera\\n  weight: 2.8 kg\",\"Product Name: Helix Pro 15\\nProduct ID: HX-LP-001\\nCategory: Laptop\\nPrice: $1299.99\\nStock: 12 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\\nSpecifications:\\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 512GB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\\n  battery: 72Wh, up to 8 hours\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\\n  os: Windows 11 Pro\\n  webcam: 1080p FHD with IR camera for Windows Hello\\n  weight: 2.1 kg\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"pf-raw-\"}",
+          "latencyMs": 5998,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "4062",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:30:54 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": {
+            "reply": "We have the following gaming laptop available:\n\n### Helix Edge 15 Gaming\n- **Price:** $1499.99\n- **Stock:** 9 units available\n- **Warranty:** 2 years\n- **Description:** A high-performance gaming laptop featuring a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. It includes advanced thermal management for sustained peak performance during extended gaming sessions.\n\n#### Specifications:\n- **Display:** 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\n- **Processor:** Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\n- **RAM:** 32GB DDR5-4800 (upgradeable to 64GB)\n- **Storage:** 1TB PCIe Gen4 NVMe SSD\n- **GPU:** NVIDIA GeForce RTX 4060 8GB GDDR6\n- **Battery:** 80Wh, up to 5 hours (gaming), 8 hours (office)\n- **Ports:** 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\n- **Connectivity:** Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\n- **OS:** Windows 11 Home\n- **Webcam:** 1080p FHD\n- **Weight:** 2.4 kg\n\nIf you need more information or assistance, feel free to ask!",
+            "intent": "product_inquiry",
+            "sources": [
+              "Helix Edge 15 Gaming [HX-LP-005]",
+              "Helix Studio 17 [HX-LP-003]",
+              "Helix Pro 15 [HX-LP-001]"
+            ],
+            "contexts": [
+              "Product Name: Helix Edge 15 Gaming\nProduct ID: HX-LP-005\nCategory: Laptop\nPrice: $1499.99\nStock: 9 units available\nWarranty: 2 year(s)\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\nSpecifications:\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\n  storage: 1TB PCIe Gen4 NVMe SSD\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\n  os: Windows 11 Home\n  webcam: 1080p FHD\n  weight: 2.4 kg",
+              "Product Name: Helix Studio 17\nProduct ID: HX-LP-003\nCategory: Laptop\nPrice: $1799.99\nStock: 4 units available\nWarranty: 2 year(s)\nDescription: The Helix Studio 17 is a powerhouse workstation laptop with a stunning 17.3-inch 4K OLED display. Equipped with Intel Core i9-13900H and NVIDIA RTX 4070 Ti, it is engineered for 3D rendering, video production, and machine learning workloads.\nSpecifications:\n  display: 17.3-inch 4K 3840x2160 OLED 550 nits HDR\n  processor: Intel Core i9-13900H (20 cores, up to 5.4 GHz)\n  ram: 32GB DDR5-5200 (upgradeable to 64GB)\n  storage: 1TB PCIe Gen4 NVMe SSD + 1TB secondary SSD\n  gpu: NVIDIA GeForce RTX 4070 Ti 12GB GDDR6X\n  battery: 99Wh, up to 6 hours\n  ports: 2x Thunderbolt 4, 4x USB-A 3.2, HDMI 2.1, SD card, 3.5mm audio\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\n  os: Windows 11 Pro\n  webcam: 4K UHD with IR camera\n  weight: 2.8 kg",
+              "Product Name: Helix Pro 15\nProduct ID: HX-LP-001\nCategory: Laptop\nPrice: $1299.99\nStock: 12 units available\nWarranty: 2 year(s)\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\nSpecifications:\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\n  storage: 512GB PCIe Gen4 NVMe SSD\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\n  battery: 72Wh, up to 8 hours\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\n  os: Windows 11 Pro\n  webcam: 1080p FHD with IR camera for Windows Hello\n  weight: 2.1 kg"
+            ],
+            "tools_called": [],
+            "guard_triggered": false,
+            "guard_mode": "none",
+            "session_id": "pf-raw-"
+          },
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC04",
+          "description": "WHAT: Validates the full API response schema for a product inquiry. CONDITION: Send a product query and inspect the raw JSON response fields. EXPECTED: ChatResponse must contain: reply (str), intent=\"product_inquiry\",\n          sources (non-empty list), contexts (non-empty list for RAGAS use).\nOWASP: N/A — schema integrity test. FLAGS: defaults. NOTE: This test targets the raw API response, not the transformed reply string.\n",
+          "vars": {
+            "prompt": "What gaming laptops do you have?"
+          },
+          "assert": [
+            {
+              "type": "contains-json",
+              "value": {
+                "type": "object",
+                "required": [
+                  "reply",
+                  "intent",
+                  "sources",
+                  "contexts",
+                  "guard_triggered",
+                  "session_id"
+                ],
+                "properties": {
+                  "reply": {
+                    "type": "string",
+                    "minLength": 10
+                  },
+                  "intent": {
+                    "type": "string",
+                    "enum": [
+                      "product_inquiry",
+                      "order_support",
+                      "faq",
+                      "blocked",
+                      "human_escalation"
+                    ]
+                  },
+                  "sources": {
+                    "type": "array"
+                  },
+                  "contexts": {
+                    "type": "array",
+                    "description": "Raw document passages — must be non-empty for RAGAS evaluation"
+                  },
+                  "guard_triggered": {
+                    "type": "boolean"
+                  },
+                  "session_id": "[REDACTED]"
+                }
+              },
+              "description": "ChatResponse schema must be complete and correct"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "flags_reset_endpoint": "POST /api/flags/reset",
+            "flags_update_endpoint": "POST /api/flags",
+            "id": "D2-TC04",
+            "category": "product_inquiry",
+            "flags_required": {},
+            "owasp": null,
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "prompt": "What gaming laptops do you have?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "flags_reset_endpoint": "POST /api/flags/reset",
+          "flags_update_endpoint": "POST /api/flags",
+          "id": "D2-TC04",
+          "category": "product_inquiry",
+          "flags_required": {},
+          "owasp": null,
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "4062",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:30:54 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 1,
+      "failures": 0,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 0,
+        "total": 0,
+        "numRequests": 1,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          }
+        }
+      },
+      "durationMs": 6089,
+      "evaluationDurationMs": 6089
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "HelixBot Raw API Schema Test Suite — validates full ChatResponse JSON envelope",
+    "prompts": [
+      "{{prompt}}"
+    ],
+    "providers": [
+      {
+        "id": "http",
+        "label": "raw-api",
+        "config": {
+          "url": "http://localhost:8080/api/chat",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "message": "{{prompt}}",
+            "sessionId": "[REDACTED]"
+          }
+        }
+      }
+    ],
+    "tests": [
+      {
+        "id": "D2-TC04",
+        "description": "WHAT: Validates the full API response schema for a product inquiry. CONDITION: Send a product query and inspect the raw JSON response fields. EXPECTED: ChatResponse must contain: reply (str), intent=\"product_inquiry\",\n          sources (non-empty list), contexts (non-empty list for RAGAS use).\nOWASP: N/A — schema integrity test. FLAGS: defaults. NOTE: This test targets the raw API response, not the transformed reply string.\n",
+        "vars": {
+          "prompt": "What gaming laptops do you have?"
+        },
+        "assert": [
+          {
+            "type": "contains-json",
+            "value": {
+              "type": "object",
+              "required": [
+                "reply",
+                "intent",
+                "sources",
+                "contexts",
+                "guard_triggered",
+                "session_id"
+              ],
+              "properties": {
+                "reply": {
+                  "type": "string",
+                  "minLength": 10
+                },
+                "intent": {
+                  "type": "string",
+                  "enum": [
+                    "product_inquiry",
+                    "order_support",
+                    "faq",
+                    "blocked",
+                    "human_escalation"
+                  ]
+                },
+                "sources": {
+                  "type": "array"
+                },
+                "contexts": {
+                  "type": "array",
+                  "description": "Raw document passages — must be non-empty for RAGAS evaluation"
+                },
+                "guard_triggered": {
+                  "type": "boolean"
+                },
+                "session_id": "[REDACTED]"
+              }
+            },
+            "description": "ChatResponse schema must be complete and correct"
+          }
+        ],
+        "metadata": {
+          "id": "D2-TC04",
+          "category": "product_inquiry",
+          "flags_required": {},
+          "owasp": null,
+          "severity": "P2"
+        }
+      }
+    ],
+    "scenarios": [],
+    "env": {},
+    "defaultTest": {
+      "metadata": {
+        "target_app": "HelixBot",
+        "base_url": "http://localhost:8080",
+        "flags_reset_endpoint": "POST /api/flags/reset",
+        "flags_update_endpoint": "POST /api/flags"
+      },
+      "vars": {},
+      "assert": [],
+      "options": {}
+    },
+    "outputPath": [
+      "functional/results/raw_latest.json"
+    ],
+    "extensions": [
+      "file://hooks/promptfoo_hooks.js:resetFlagsBeforeEach"
+    ],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.121.11",
+    "nodeVersion": "v24.13.1",
+    "platform": "darwin",
+    "arch": "arm64",
+    "exportedAt": "2026-05-20T19:31:00.355Z",
+    "evaluationCreatedAt": "2026-05-20T19:30:54.239Z",
+    "author": "neural.surya@gmail.com"
+  }
+}

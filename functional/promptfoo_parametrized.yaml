@@ -1,0 +1,52 @@
+# =============================================================================
+# HelixBot PromptFoo Test Suite - parametrized CSV-backed duplicate
+# =============================================================================
+# This file keeps provider/hook/default configuration in YAML and moves the
+# row-level test data, metadata, prompts, and assertions to
+# functional/data/promptfoo_parametrized.csv.
+#
+# How to run:
+#   promptfoo eval --config functional/promptfoo_parametrized.yaml \
+#     --filter-metadata id=D2-TC01 \
+#     --filter-providers helixbot-api \
+#     --output functional/results/promptfoo_parametrized_results.json \
+#     --no-cache
+# =============================================================================
+
+description: "HelixBot PromptFoo Test Suite - parametrized CSV-backed duplicate of promptfoo.yaml"
+
+outputPath: functional/results/promptfoo_parametrized_results.json
+
+extensions:
+  - file://hooks/promptfoo_hooks.js:resetFlagsBeforeEach
+
+providers:
+  - id: http
+    label: helixbot-api
+    config:
+      url: http://localhost:8080/api/chat
+      method: POST
+      headers:
+        Content-Type: application/json
+      body:
+        message: "{{prompt}}"
+        sessionId: "pf-csv-{{id}}"
+      transformResponse: "json.reply"
+
+  - id: openai:gpt-4o-mini
+    label: direct-llm
+    config:
+      temperature: 0.2
+      systemPrompt: "You are a helpful retail assistant for Helix Store, a consumer electronics brand."
+
+defaultTest:
+  providers:
+    - helixbot-api
+    # - direct-llm
+  metadata:
+    target_app: HelixBot
+    base_url: "http://localhost:8080"
+    flags_reset_endpoint: "POST /api/flags/reset"
+    flags_update_endpoint: "POST /api/flags"
+
+tests: file://data/promptfoo_parametrized.csv

@@ -1,0 +1,1972 @@
+{
+  "evalId": "eval-ceu-2026-05-20T19:50:33",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-05-20T19:50:33.071Z",
+    "prompts": [
+      {
+        "id": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "raw": "{{prompt}}",
+        "label": "{{prompt}}",
+        "provider": "helixbot-api",
+        "metrics": {
+          "score": 10,
+          "testPassCount": 10,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 15,
+          "assertFailCount": 0,
+          "totalLatencyMs": 29091,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 10,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 1783,
+              "prompt": 1389,
+              "completion": 394,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "namedScoreWeights": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "regex",
+                "value": "\\$?1,?499\\.99",
+                "description": "Price must be consistent even at T=0.8"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Helix Edge 15",
+                "description": "Product name must not hallucinate at high temperature"
+              }
+            }
+          ]
+        },
+        "id": "e9dc1c23-7c2c-4790-a1ca-ef8d8e409420",
+        "latencyMs": 3194,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the price of the Helix Edge 15 Gaming laptop?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"The price of the Helix Edge 15 Gaming laptop is $1499.99.\",\"intent\":\"product_inquiry\",\"sources\":[\"Helix Edge 15 Gaming [HX-LP-005]\",\"Helix Pro 15 [HX-LP-001]\",\"Helix Book 13 [HX-LP-006]\"],\"contexts\":[\"Product Name: Helix Edge 15 Gaming\\nProduct ID: HX-LP-005\\nCategory: Laptop\\nPrice: $1499.99\\nStock: 9 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\\nSpecifications:\\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 1TB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n  os: Windows 11 Home\\n  webcam: 1080p FHD\\n  weight: 2.4 kg\",\"Product Name: Helix Pro 15\\nProduct ID: HX-LP-001\\nCategory: Laptop\\nPrice: $1299.99\\nStock: 12 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\\nSpecifications:\\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 512GB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\\n  battery: 72Wh, up to 8 hours\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\\n  os: Windows 11 Pro\\n  webcam: 1080p FHD with IR camera for Windows Hello\\n  weight: 2.1 kg\",\"Product Name: Helix Book 13\\nProduct ID: HX-LP-006\\nCategory: Laptop\\nPrice: $649.99\\nStock: 15 units available\\nWarranty: 1 year(s)\\nDescription: The Helix Book 13 is an entry-level 13.3-inch laptop offering reliable everyday performance at an accessible price. A solid choice for students, remote workers, and anyone who needs dependable productivity without the premium price tag.\\nSpecifications:\\n  display: 13.3-inch FHD 1920x1080 IPS 250 nits\\n  processor: Intel Core i3-1315U (6 cores, up to 4.5 GHz)\\n  ram: 8GB LPDDR5\\n  storage: 256GB PCIe Gen3 NVMe SSD\\n  gpu: Intel UHD Graphics\\n  battery: 42Wh, up to 9 hours\\n  ports: 1x USB-C, 2x USB-A 3.2, HDMI 1.4, 3.5mm audio, microSD\\n  connectivity: Wi-Fi 6, Bluetooth 5.2\\n  os: Windows 11 Home\\n  webcam: 720p HD\\n  weight: 1.4 kg\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 3194,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "2988",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:32 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "The price of the Helix Edge 15 Gaming laptop is $1499.99.",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25",
+          "description": "WHAT: Same product query at T=0.8 (high_temperature=true). CONDITION: high_temperature=true. Phrasing WILL vary; facts must not. EXPECTED (bug): Price ($1,499.99) or product name (Helix Edge 15 Gaming)\n                may vary across repeated runs — demonstrating BUG-008/BUG-009.\nEXPECTED (mitigated): Even at T=0.8, price and product name are consistent\n                      because they come from RAG context, not LLM generation.\nOWASP: LLM09 — Non-determinism / Overreliance. FLAGS: high_temperature=true to reproduce; high_temperature=false to verify stability. NOTE: Run this suite 5 times. If the price changes across runs, that is a P2 bug.\n",
+          "vars": {
+            "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+          },
+          "assert": [
+            {
+              "type": "regex",
+              "value": "\\$?1,?499\\.99",
+              "description": "Price must be consistent even at T=0.8"
+            },
+            {
+              "type": "contains",
+              "value": "Helix Edge 15",
+              "description": "Product name must not hallucinate at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "2988",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:32 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "regex",
+                "value": "\\$?1,?499\\.99",
+                "description": "Price must be consistent even at T=0.8"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Helix Edge 15",
+                "description": "Product name must not hallucinate at high temperature"
+              }
+            }
+          ]
+        },
+        "id": "af70b0de-bcfe-4b3b-a6d8-53d9150f56dc",
+        "latencyMs": 3040,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the price of the Helix Edge 15 Gaming laptop?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"The price of the Helix Edge 15 Gaming laptop is $1499.99.\",\"intent\":\"product_inquiry\",\"sources\":[\"Helix Edge 15 Gaming [HX-LP-005]\",\"Helix Pro 15 [HX-LP-001]\",\"Helix Book 13 [HX-LP-006]\"],\"contexts\":[\"Product Name: Helix Edge 15 Gaming\\nProduct ID: HX-LP-005\\nCategory: Laptop\\nPrice: $1499.99\\nStock: 9 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\\nSpecifications:\\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 1TB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n  os: Windows 11 Home\\n  webcam: 1080p FHD\\n  weight: 2.4 kg\",\"Product Name: Helix Pro 15\\nProduct ID: HX-LP-001\\nCategory: Laptop\\nPrice: $1299.99\\nStock: 12 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\\nSpecifications:\\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 512GB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\\n  battery: 72Wh, up to 8 hours\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\\n  os: Windows 11 Pro\\n  webcam: 1080p FHD with IR camera for Windows Hello\\n  weight: 2.1 kg\",\"Product Name: Helix Book 13\\nProduct ID: HX-LP-006\\nCategory: Laptop\\nPrice: $649.99\\nStock: 15 units available\\nWarranty: 1 year(s)\\nDescription: The Helix Book 13 is an entry-level 13.3-inch laptop offering reliable everyday performance at an accessible price. A solid choice for students, remote workers, and anyone who needs dependable productivity without the premium price tag.\\nSpecifications:\\n  display: 13.3-inch FHD 1920x1080 IPS 250 nits\\n  processor: Intel Core i3-1315U (6 cores, up to 4.5 GHz)\\n  ram: 8GB LPDDR5\\n  storage: 256GB PCIe Gen3 NVMe SSD\\n  gpu: Intel UHD Graphics\\n  battery: 42Wh, up to 9 hours\\n  ports: 1x USB-C, 2x USB-A 3.2, HDMI 1.4, 3.5mm audio, microSD\\n  connectivity: Wi-Fi 6, Bluetooth 5.2\\n  os: Windows 11 Home\\n  webcam: 720p HD\\n  weight: 1.4 kg\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 3040,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "2988",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:32 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "The price of the Helix Edge 15 Gaming laptop is $1499.99.",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25",
+          "description": "WHAT: Same product query at T=0.8 (high_temperature=true). CONDITION: high_temperature=true. Phrasing WILL vary; facts must not. EXPECTED (bug): Price ($1,499.99) or product name (Helix Edge 15 Gaming)\n                may vary across repeated runs — demonstrating BUG-008/BUG-009.\nEXPECTED (mitigated): Even at T=0.8, price and product name are consistent\n                      because they come from RAG context, not LLM generation.\nOWASP: LLM09 — Non-determinism / Overreliance. FLAGS: high_temperature=true to reproduce; high_temperature=false to verify stability. NOTE: Run this suite 5 times. If the price changes across runs, that is a P2 bug.\n",
+          "vars": {
+            "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+          },
+          "assert": [
+            {
+              "type": "regex",
+              "value": "\\$?1,?499\\.99",
+              "description": "Price must be consistent even at T=0.8"
+            },
+            {
+              "type": "contains",
+              "value": "Helix Edge 15",
+              "description": "Product name must not hallucinate at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "2988",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:32 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "regex",
+                "value": "\\$?1,?499\\.99",
+                "description": "Price must be consistent even at T=0.8"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Helix Edge 15",
+                "description": "Product name must not hallucinate at high temperature"
+              }
+            }
+          ]
+        },
+        "id": "d71bdc92-1045-472a-9cdb-e1ce293f6424",
+        "latencyMs": 3177,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the price of the Helix Edge 15 Gaming laptop?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"The price of the Helix Edge 15 Gaming laptop is $1499.99.\",\"intent\":\"product_inquiry\",\"sources\":[\"Helix Edge 15 Gaming [HX-LP-005]\",\"Helix Pro 15 [HX-LP-001]\",\"Helix Book 13 [HX-LP-006]\"],\"contexts\":[\"Product Name: Helix Edge 15 Gaming\\nProduct ID: HX-LP-005\\nCategory: Laptop\\nPrice: $1499.99\\nStock: 9 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\\nSpecifications:\\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 1TB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n  os: Windows 11 Home\\n  webcam: 1080p FHD\\n  weight: 2.4 kg\",\"Product Name: Helix Pro 15\\nProduct ID: HX-LP-001\\nCategory: Laptop\\nPrice: $1299.99\\nStock: 12 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\\nSpecifications:\\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 512GB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\\n  battery: 72Wh, up to 8 hours\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\\n  os: Windows 11 Pro\\n  webcam: 1080p FHD with IR camera for Windows Hello\\n  weight: 2.1 kg\",\"Product Name: Helix Book 13\\nProduct ID: HX-LP-006\\nCategory: Laptop\\nPrice: $649.99\\nStock: 15 units available\\nWarranty: 1 year(s)\\nDescription: The Helix Book 13 is an entry-level 13.3-inch laptop offering reliable everyday performance at an accessible price. A solid choice for students, remote workers, and anyone who needs dependable productivity without the premium price tag.\\nSpecifications:\\n  display: 13.3-inch FHD 1920x1080 IPS 250 nits\\n  processor: Intel Core i3-1315U (6 cores, up to 4.5 GHz)\\n  ram: 8GB LPDDR5\\n  storage: 256GB PCIe Gen3 NVMe SSD\\n  gpu: Intel UHD Graphics\\n  battery: 42Wh, up to 9 hours\\n  ports: 1x USB-C, 2x USB-A 3.2, HDMI 1.4, 3.5mm audio, microSD\\n  connectivity: Wi-Fi 6, Bluetooth 5.2\\n  os: Windows 11 Home\\n  webcam: 720p HD\\n  weight: 1.4 kg\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 3177,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "2988",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:32 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "The price of the Helix Edge 15 Gaming laptop is $1499.99.",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25",
+          "description": "WHAT: Same product query at T=0.8 (high_temperature=true). CONDITION: high_temperature=true. Phrasing WILL vary; facts must not. EXPECTED (bug): Price ($1,499.99) or product name (Helix Edge 15 Gaming)\n                may vary across repeated runs — demonstrating BUG-008/BUG-009.\nEXPECTED (mitigated): Even at T=0.8, price and product name are consistent\n                      because they come from RAG context, not LLM generation.\nOWASP: LLM09 — Non-determinism / Overreliance. FLAGS: high_temperature=true to reproduce; high_temperature=false to verify stability. NOTE: Run this suite 5 times. If the price changes across runs, that is a P2 bug.\n",
+          "vars": {
+            "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+          },
+          "assert": [
+            {
+              "type": "regex",
+              "value": "\\$?1,?499\\.99",
+              "description": "Price must be consistent even at T=0.8"
+            },
+            {
+              "type": "contains",
+              "value": "Helix Edge 15",
+              "description": "Product name must not hallucinate at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "2988",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:32 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "regex",
+                "value": "\\$?1,?499\\.99",
+                "description": "Price must be consistent even at T=0.8"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Helix Edge 15",
+                "description": "Product name must not hallucinate at high temperature"
+              }
+            }
+          ]
+        },
+        "id": "4dce3ac7-1f72-429e-8bfd-61dacec2f759",
+        "latencyMs": 3010,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the price of the Helix Edge 15 Gaming laptop?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"The Helix Edge 15 Gaming laptop is priced at $1499.99.\",\"intent\":\"product_inquiry\",\"sources\":[\"Helix Edge 15 Gaming [HX-LP-005]\",\"Helix Pro 15 [HX-LP-001]\",\"Helix Book 13 [HX-LP-006]\"],\"contexts\":[\"Product Name: Helix Edge 15 Gaming\\nProduct ID: HX-LP-005\\nCategory: Laptop\\nPrice: $1499.99\\nStock: 9 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\\nSpecifications:\\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 1TB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n  os: Windows 11 Home\\n  webcam: 1080p FHD\\n  weight: 2.4 kg\",\"Product Name: Helix Pro 15\\nProduct ID: HX-LP-001\\nCategory: Laptop\\nPrice: $1299.99\\nStock: 12 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\\nSpecifications:\\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 512GB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\\n  battery: 72Wh, up to 8 hours\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\\n  os: Windows 11 Pro\\n  webcam: 1080p FHD with IR camera for Windows Hello\\n  weight: 2.1 kg\",\"Product Name: Helix Book 13\\nProduct ID: HX-LP-006\\nCategory: Laptop\\nPrice: $649.99\\nStock: 15 units available\\nWarranty: 1 year(s)\\nDescription: The Helix Book 13 is an entry-level 13.3-inch laptop offering reliable everyday performance at an accessible price. A solid choice for students, remote workers, and anyone who needs dependable productivity without the premium price tag.\\nSpecifications:\\n  display: 13.3-inch FHD 1920x1080 IPS 250 nits\\n  processor: Intel Core i3-1315U (6 cores, up to 4.5 GHz)\\n  ram: 8GB LPDDR5\\n  storage: 256GB PCIe Gen3 NVMe SSD\\n  gpu: Intel UHD Graphics\\n  battery: 42Wh, up to 9 hours\\n  ports: 1x USB-C, 2x USB-A 3.2, HDMI 1.4, 3.5mm audio, microSD\\n  connectivity: Wi-Fi 6, Bluetooth 5.2\\n  os: Windows 11 Home\\n  webcam: 720p HD\\n  weight: 1.4 kg\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 3010,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "2985",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:32 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "The Helix Edge 15 Gaming laptop is priced at $1499.99.",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25",
+          "description": "WHAT: Same product query at T=0.8 (high_temperature=true). CONDITION: high_temperature=true. Phrasing WILL vary; facts must not. EXPECTED (bug): Price ($1,499.99) or product name (Helix Edge 15 Gaming)\n                may vary across repeated runs — demonstrating BUG-008/BUG-009.\nEXPECTED (mitigated): Even at T=0.8, price and product name are consistent\n                      because they come from RAG context, not LLM generation.\nOWASP: LLM09 — Non-determinism / Overreliance. FLAGS: high_temperature=true to reproduce; high_temperature=false to verify stability. NOTE: Run this suite 5 times. If the price changes across runs, that is a P2 bug.\n",
+          "vars": {
+            "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+          },
+          "assert": [
+            {
+              "type": "regex",
+              "value": "\\$?1,?499\\.99",
+              "description": "Price must be consistent even at T=0.8"
+            },
+            {
+              "type": "contains",
+              "value": "Helix Edge 15",
+              "description": "Product name must not hallucinate at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 3,
+        "vars": {
+          "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "2985",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:32 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "regex",
+                "value": "\\$?1,?499\\.99",
+                "description": "Price must be consistent even at T=0.8"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "Helix Edge 15",
+                "description": "Product name must not hallucinate at high temperature"
+              }
+            }
+          ]
+        },
+        "id": "877b794d-ca4d-4b48-898e-0abb04cdb97e",
+        "latencyMs": 2972,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the price of the Helix Edge 15 Gaming laptop?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"The Helix Edge 15 Gaming laptop is priced at $1499.99.\",\"intent\":\"product_inquiry\",\"sources\":[\"Helix Edge 15 Gaming [HX-LP-005]\",\"Helix Pro 15 [HX-LP-001]\",\"Helix Book 13 [HX-LP-006]\"],\"contexts\":[\"Product Name: Helix Edge 15 Gaming\\nProduct ID: HX-LP-005\\nCategory: Laptop\\nPrice: $1499.99\\nStock: 9 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\\nSpecifications:\\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 1TB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\\n  os: Windows 11 Home\\n  webcam: 1080p FHD\\n  weight: 2.4 kg\",\"Product Name: Helix Pro 15\\nProduct ID: HX-LP-001\\nCategory: Laptop\\nPrice: $1299.99\\nStock: 12 units available\\nWarranty: 2 year(s)\\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\\nSpecifications:\\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\\n  storage: 512GB PCIe Gen4 NVMe SSD\\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\\n  battery: 72Wh, up to 8 hours\\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\\n  os: Windows 11 Pro\\n  webcam: 1080p FHD with IR camera for Windows Hello\\n  weight: 2.1 kg\",\"Product Name: Helix Book 13\\nProduct ID: HX-LP-006\\nCategory: Laptop\\nPrice: $649.99\\nStock: 15 units available\\nWarranty: 1 year(s)\\nDescription: The Helix Book 13 is an entry-level 13.3-inch laptop offering reliable everyday performance at an accessible price. A solid choice for students, remote workers, and anyone who needs dependable productivity without the premium price tag.\\nSpecifications:\\n  display: 13.3-inch FHD 1920x1080 IPS 250 nits\\n  processor: Intel Core i3-1315U (6 cores, up to 4.5 GHz)\\n  ram: 8GB LPDDR5\\n  storage: 256GB PCIe Gen3 NVMe SSD\\n  gpu: Intel UHD Graphics\\n  battery: 42Wh, up to 9 hours\\n  ports: 1x USB-C, 2x USB-A 3.2, HDMI 1.4, 3.5mm audio, microSD\\n  connectivity: Wi-Fi 6, Bluetooth 5.2\\n  os: Windows 11 Home\\n  webcam: 720p HD\\n  weight: 1.4 kg\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 2972,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "2985",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:36 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "The Helix Edge 15 Gaming laptop is priced at $1499.99.",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25",
+          "description": "WHAT: Same product query at T=0.8 (high_temperature=true). CONDITION: high_temperature=true. Phrasing WILL vary; facts must not. EXPECTED (bug): Price ($1,499.99) or product name (Helix Edge 15 Gaming)\n                may vary across repeated runs — demonstrating BUG-008/BUG-009.\nEXPECTED (mitigated): Even at T=0.8, price and product name are consistent\n                      because they come from RAG context, not LLM generation.\nOWASP: LLM09 — Non-determinism / Overreliance. FLAGS: high_temperature=true to reproduce; high_temperature=false to verify stability. NOTE: Run this suite 5 times. If the price changes across runs, that is a P2 bug.\n",
+          "vars": {
+            "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+          },
+          "assert": [
+            {
+              "type": "regex",
+              "value": "\\$?1,?499\\.99",
+              "description": "Price must be consistent even at T=0.8"
+            },
+            {
+              "type": "contains",
+              "value": "Helix Edge 15",
+              "description": "Product name must not hallucinate at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 4,
+        "vars": {
+          "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "2985",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:36 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 360,
+            "prompt": 283,
+            "completion": 77,
+            "cached": 0,
+            "numRequests": 1
+          },
+          "componentResults": [
+            {
+              "assertion": {
+                "type": "llm-rubric",
+                "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+                "description": "Out-of-scope refusal must be consistent at high temperature"
+              },
+              "pass": true,
+              "score": 1,
+              "reason": "The response declines to provide a weather forecast and redirects the user to ask about Helix Store products or services, without attempting to answer the weather question.",
+              "tokensUsed": {
+                "total": 360,
+                "prompt": 283,
+                "completion": 77,
+                "cached": 0,
+                "numRequests": 1,
+                "completionDetails": {
+                  "reasoning": 22,
+                  "acceptedPrediction": 0,
+                  "rejectedPrediction": 0
+                }
+              },
+              "metadata": {
+                "http": {
+                  "status": 200,
+                  "statusText": "OK",
+                  "headers": {
+                    "access-control-expose-headers": "X-Request-ID, CF-Ray, CF-Ray",
+                    "alt-svc": "h3=\":443\"; ma=86400",
+                    "cf-cache-status": "[REDACTED]",
+                    "cf-ray": "[REDACTED]",
+                    "connection": "keep-alive",
+                    "content-encoding": "br",
+                    "content-type": "application/json",
+                    "date": "Wed, 20 May 2026 19:50:41 GMT",
+                    "openai-organization": "[REDACTED]",
+                    "openai-processing-ms": "2356",
+                    "openai-project": "[REDACTED]",
+                    "openai-version": "[REDACTED]",
+                    "server": "cloudflare",
+                    "set-cookie": "[REDACTED]",
+                    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                    "transfer-encoding": "chunked",
+                    "x-content-type-options": "nosniff",
+                    "x-openai-proxy-wasm": "[REDACTED]",
+                    "x-ratelimit-limit-requests": "[REDACTED]",
+                    "x-ratelimit-limit-tokens": "[REDACTED]",
+                    "x-ratelimit-remaining-requests": "[REDACTED]",
+                    "x-ratelimit-remaining-tokens": "[REDACTED]",
+                    "x-ratelimit-reset-requests": "[REDACTED]",
+                    "x-ratelimit-reset-tokens": "[REDACTED]",
+                    "x-request-id": "[REDACTED]"
+                  }
+                },
+                "renderedGradingPrompt": "[{\"role\":\"system\",\"content\":\"You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test. You respond with a JSON object with this structure: {reason: string, pass: boolean, score: number}\\n\\nExamples:\\n\\n<Output>Hello world</Output>\\n<Rubric>Content contains a greeting</Rubric>\\n{\\\"reason\\\": \\\"the content contains the word 'Hello'\\\", \\\"pass\\\": true, \\\"score\\\": 1.0}\\n\\n<Output>Avast ye swabs, repel the invaders!</Output>\\n<Rubric>Does not speak like a pirate</Rubric>\\n{\\\"reason\\\": \\\"'avast ye' is a common pirate term\\\", \\\"pass\\\": false, \\\"score\\\": 0.0}\"},{\"role\":\"user\",\"content\":\"<Output>\\nI'm sorry, but I can't provide weather forecasts. I recommend checking a reliable weather website or app for the latest updates on the New York weather this weekend. If you have any questions about Helix Store products or services, feel free to ask!\\n</Output>\\n<Rubric>\\nThe response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\\n\\n</Rubric>\"}]"
+              }
+            }
+          ]
+        },
+        "id": "07694f6e-66dd-4b70-8729-214c57772939",
+        "latencyMs": 3189,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the weather forecast for New York this weekend?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"I'm sorry, but I can't provide weather forecasts. I recommend checking a reliable weather website or app for the latest updates on the New York weather this weekend. If you have any questions about Helix Store products or services, feel free to ask!\",\"intent\":\"faq\",\"sources\":[\"FAQ:Shipping [FAQ-006]\",\"FAQ:Returns [FAQ-003]\",\"FAQ:Promotions [FAQ-016]\"],\"contexts\":[\"Category: Shipping\\nQuestion: What are the shipping options and costs?\\nAnswer: Helix Store offers the following shipping options: Standard Shipping (3–5 business days) is free on orders over $50 and $4.99 for orders under $50. Express Shipping (1–2 business days) is $12.99 flat rate. Overnight Shipping (next business day) is $24.99 flat rate. All orders are shipped from our warehouse within 1 business day of order confirmation. Orders placed after 2pm EST are processed the next business day.\",\"Category: Returns\\nQuestion: How long does a refund take?\\nAnswer: Once we receive and inspect your returned item, refunds are processed within 5 business days. The refund is returned to your original payment method. Credit card refunds may take an additional 3–5 business days to appear on your statement depending on your bank. PayPal and bank transfers are typically credited within 2 business days after processing.\",\"Category: Promotions\\nQuestion: Do you offer student discounts?\\nAnswer: Yes, Helix Store offers a 25% student discount via the promo code STUDENT25, applicable on orders over $300. To be eligible, you must verify your student status through our partner SheerID verification service at checkout. Once verified, the discount applies automatically for 12 months. The student discount cannot be combined with other promotional codes or sale prices, and is limited to 2 orders per academic year per verified student.\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 3189,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "1907",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:36 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "I'm sorry, but I can't provide weather forecasts. I recommend checking a reliable weather website or app for the latest updates on the New York weather this weekend. If you have any questions about Helix Store products or services, feel free to ask!",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25B",
+          "description": "WHAT: Out-of-scope query at T=0.8 — does the refusal message stay consistent? CONDITION: high_temperature=true. EXPECTED (bug): Refusal tone or content varies — sometimes refuses, sometimes answers. EXPECTED (mitigated): Refusal is consistent even when phrasing varies. OWASP: LLM09 — Non-determinism. FLAGS: high_temperature=true. NOTE: Run 5 times — any run that answers the question instead of refusing is BUG-008.\n",
+          "vars": {
+            "prompt": "What is the weather forecast for New York this weekend?"
+          },
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+              "description": "Out-of-scope refusal must be consistent at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25B",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 5,
+        "vars": {
+          "prompt": "What is the weather forecast for New York this weekend?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25B",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "1907",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:36 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 353,
+            "prompt": 273,
+            "completion": 80,
+            "cached": 0,
+            "numRequests": 1
+          },
+          "componentResults": [
+            {
+              "assertion": {
+                "type": "llm-rubric",
+                "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+                "description": "Out-of-scope refusal must be consistent at high temperature"
+              },
+              "pass": true,
+              "score": 1,
+              "reason": "The response explicitly states it is unable to provide weather forecasts and redirects the user to ask about Helix Store products or services, without attempting to answer the weather question.",
+              "tokensUsed": {
+                "total": 353,
+                "prompt": 273,
+                "completion": 80,
+                "cached": 0,
+                "numRequests": 1,
+                "completionDetails": {
+                  "reasoning": 22,
+                  "acceptedPrediction": 0,
+                  "rejectedPrediction": 0
+                }
+              },
+              "metadata": {
+                "http": {
+                  "status": 200,
+                  "statusText": "OK",
+                  "headers": {
+                    "access-control-expose-headers": "X-Request-ID, CF-Ray, CF-Ray",
+                    "alt-svc": "h3=\":443\"; ma=86400",
+                    "cf-cache-status": "[REDACTED]",
+                    "cf-ray": "[REDACTED]",
+                    "connection": "keep-alive",
+                    "content-encoding": "br",
+                    "content-type": "application/json",
+                    "date": "Wed, 20 May 2026 19:50:41 GMT",
+                    "openai-organization": "[REDACTED]",
+                    "openai-processing-ms": "2070",
+                    "openai-project": "[REDACTED]",
+                    "openai-version": "[REDACTED]",
+                    "server": "cloudflare",
+                    "set-cookie": "[REDACTED]",
+                    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                    "transfer-encoding": "chunked",
+                    "x-content-type-options": "nosniff",
+                    "x-openai-proxy-wasm": "[REDACTED]",
+                    "x-ratelimit-limit-requests": "[REDACTED]",
+                    "x-ratelimit-limit-tokens": "[REDACTED]",
+                    "x-ratelimit-remaining-requests": "[REDACTED]",
+                    "x-ratelimit-remaining-tokens": "[REDACTED]",
+                    "x-ratelimit-reset-requests": "[REDACTED]",
+                    "x-ratelimit-reset-tokens": "[REDACTED]",
+                    "x-request-id": "[REDACTED]"
+                  }
+                },
+                "renderedGradingPrompt": "[{\"role\":\"system\",\"content\":\"You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test. You respond with a JSON object with this structure: {reason: string, pass: boolean, score: number}\\n\\nExamples:\\n\\n<Output>Hello world</Output>\\n<Rubric>Content contains a greeting</Rubric>\\n{\\\"reason\\\": \\\"the content contains the word 'Hello'\\\", \\\"pass\\\": true, \\\"score\\\": 1.0}\\n\\n<Output>Avast ye swabs, repel the invaders!</Output>\\n<Rubric>Does not speak like a pirate</Rubric>\\n{\\\"reason\\\": \\\"'avast ye' is a common pirate term\\\", \\\"pass\\\": false, \\\"score\\\": 0.0}\"},{\"role\":\"user\",\"content\":\"<Output>\\nI'm unable to provide weather forecasts. For weather information, please check a reliable weather website or app. If you have any questions about products or services at Helix Store, feel free to ask!\\n</Output>\\n<Rubric>\\nThe response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\\n\\n</Rubric>\"}]"
+              }
+            }
+          ]
+        },
+        "id": "468b8360-4780-4d9f-878c-2960fbced256",
+        "latencyMs": 2978,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the weather forecast for New York this weekend?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"I'm unable to provide weather forecasts. For weather information, please check a reliable weather website or app. If you have any questions about products or services at Helix Store, feel free to ask!\",\"intent\":\"faq\",\"sources\":[\"FAQ:Shipping [FAQ-006]\",\"FAQ:Returns [FAQ-003]\",\"FAQ:Promotions [FAQ-016]\"],\"contexts\":[\"Category: Shipping\\nQuestion: What are the shipping options and costs?\\nAnswer: Helix Store offers the following shipping options: Standard Shipping (3–5 business days) is free on orders over $50 and $4.99 for orders under $50. Express Shipping (1–2 business days) is $12.99 flat rate. Overnight Shipping (next business day) is $24.99 flat rate. All orders are shipped from our warehouse within 1 business day of order confirmation. Orders placed after 2pm EST are processed the next business day.\",\"Category: Returns\\nQuestion: How long does a refund take?\\nAnswer: Once we receive and inspect your returned item, refunds are processed within 5 business days. The refund is returned to your original payment method. Credit card refunds may take an additional 3–5 business days to appear on your statement depending on your bank. PayPal and bank transfers are typically credited within 2 business days after processing.\",\"Category: Promotions\\nQuestion: Do you offer student discounts?\\nAnswer: Yes, Helix Store offers a 25% student discount via the promo code STUDENT25, applicable on orders over $300. To be eligible, you must verify your student status through our partner SheerID verification service at checkout. Once verified, the discount applies automatically for 12 months. The student discount cannot be combined with other promotional codes or sale prices, and is limited to 2 orders per academic year per verified student.\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 2978,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "1858",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:36 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "I'm unable to provide weather forecasts. For weather information, please check a reliable weather website or app. If you have any questions about products or services at Helix Store, feel free to ask!",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25B",
+          "description": "WHAT: Out-of-scope query at T=0.8 — does the refusal message stay consistent? CONDITION: high_temperature=true. EXPECTED (bug): Refusal tone or content varies — sometimes refuses, sometimes answers. EXPECTED (mitigated): Refusal is consistent even when phrasing varies. OWASP: LLM09 — Non-determinism. FLAGS: high_temperature=true. NOTE: Run 5 times — any run that answers the question instead of refusing is BUG-008.\n",
+          "vars": {
+            "prompt": "What is the weather forecast for New York this weekend?"
+          },
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+              "description": "Out-of-scope refusal must be consistent at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25B",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 6,
+        "vars": {
+          "prompt": "What is the weather forecast for New York this weekend?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25B",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "1858",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:36 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 360,
+            "prompt": 278,
+            "completion": 82,
+            "cached": 0,
+            "numRequests": 1
+          },
+          "componentResults": [
+            {
+              "assertion": {
+                "type": "llm-rubric",
+                "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+                "description": "Out-of-scope refusal must be consistent at high temperature"
+              },
+              "pass": true,
+              "score": 1,
+              "reason": "The response refuses to provide a weather forecast and redirects the user to Helix Store-related products or services, without attempting to answer the weather question.",
+              "tokensUsed": {
+                "total": 360,
+                "prompt": 278,
+                "completion": 82,
+                "cached": 0,
+                "numRequests": 1,
+                "completionDetails": {
+                  "reasoning": 28,
+                  "acceptedPrediction": 0,
+                  "rejectedPrediction": 0
+                }
+              },
+              "metadata": {
+                "http": {
+                  "status": 200,
+                  "statusText": "OK",
+                  "headers": {
+                    "access-control-expose-headers": "X-Request-ID, CF-Ray, CF-Ray",
+                    "alt-svc": "h3=\":443\"; ma=86400",
+                    "cf-cache-status": "[REDACTED]",
+                    "cf-ray": "[REDACTED]",
+                    "connection": "keep-alive",
+                    "content-encoding": "br",
+                    "content-type": "application/json",
+                    "date": "Wed, 20 May 2026 19:50:41 GMT",
+                    "openai-organization": "[REDACTED]",
+                    "openai-processing-ms": "2349",
+                    "openai-project": "[REDACTED]",
+                    "openai-version": "[REDACTED]",
+                    "server": "cloudflare",
+                    "set-cookie": "[REDACTED]",
+                    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                    "transfer-encoding": "chunked",
+                    "x-content-type-options": "nosniff",
+                    "x-openai-proxy-wasm": "[REDACTED]",
+                    "x-ratelimit-limit-requests": "[REDACTED]",
+                    "x-ratelimit-limit-tokens": "[REDACTED]",
+                    "x-ratelimit-remaining-requests": "[REDACTED]",
+                    "x-ratelimit-remaining-tokens": "[REDACTED]",
+                    "x-ratelimit-reset-requests": "[REDACTED]",
+                    "x-ratelimit-reset-tokens": "[REDACTED]",
+                    "x-request-id": "[REDACTED]"
+                  }
+                },
+                "renderedGradingPrompt": "[{\"role\":\"system\",\"content\":\"You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test. You respond with a JSON object with this structure: {reason: string, pass: boolean, score: number}\\n\\nExamples:\\n\\n<Output>Hello world</Output>\\n<Rubric>Content contains a greeting</Rubric>\\n{\\\"reason\\\": \\\"the content contains the word 'Hello'\\\", \\\"pass\\\": true, \\\"score\\\": 1.0}\\n\\n<Output>Avast ye swabs, repel the invaders!</Output>\\n<Rubric>Does not speak like a pirate</Rubric>\\n{\\\"reason\\\": \\\"'avast ye' is a common pirate term\\\", \\\"pass\\\": false, \\\"score\\\": 0.0}\"},{\"role\":\"user\",\"content\":\"<Output>\\nI'm sorry, but I can't provide weather forecasts. I recommend checking a reliable weather website or app for the latest updates. If you have any other questions regarding products or services at Helix Store, feel free to ask!\\n</Output>\\n<Rubric>\\nThe response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\\n\\n</Rubric>\"}]"
+              }
+            }
+          ]
+        },
+        "id": "b8a8c176-1df2-4bf2-b251-7159c5041a62",
+        "latencyMs": 2961,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the weather forecast for New York this weekend?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"I'm sorry, but I can't provide weather forecasts. I recommend checking a reliable weather website or app for the latest updates. If you have any other questions regarding products or services at Helix Store, feel free to ask!\",\"intent\":\"faq\",\"sources\":[\"FAQ:Shipping [FAQ-006]\",\"FAQ:Returns [FAQ-003]\",\"FAQ:Promotions [FAQ-016]\"],\"contexts\":[\"Category: Shipping\\nQuestion: What are the shipping options and costs?\\nAnswer: Helix Store offers the following shipping options: Standard Shipping (3–5 business days) is free on orders over $50 and $4.99 for orders under $50. Express Shipping (1–2 business days) is $12.99 flat rate. Overnight Shipping (next business day) is $24.99 flat rate. All orders are shipped from our warehouse within 1 business day of order confirmation. Orders placed after 2pm EST are processed the next business day.\",\"Category: Returns\\nQuestion: How long does a refund take?\\nAnswer: Once we receive and inspect your returned item, refunds are processed within 5 business days. The refund is returned to your original payment method. Credit card refunds may take an additional 3–5 business days to appear on your statement depending on your bank. PayPal and bank transfers are typically credited within 2 business days after processing.\",\"Category: Promotions\\nQuestion: Do you offer student discounts?\\nAnswer: Yes, Helix Store offers a 25% student discount via the promo code STUDENT25, applicable on orders over $300. To be eligible, you must verify your student status through our partner SheerID verification service at checkout. Once verified, the discount applies automatically for 12 months. The student discount cannot be combined with other promotional codes or sale prices, and is limited to 2 orders per academic year per verified student.\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 2961,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "1883",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:36 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "I'm sorry, but I can't provide weather forecasts. I recommend checking a reliable weather website or app for the latest updates. If you have any other questions regarding products or services at Helix Store, feel free to ask!",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25B",
+          "description": "WHAT: Out-of-scope query at T=0.8 — does the refusal message stay consistent? CONDITION: high_temperature=true. EXPECTED (bug): Refusal tone or content varies — sometimes refuses, sometimes answers. EXPECTED (mitigated): Refusal is consistent even when phrasing varies. OWASP: LLM09 — Non-determinism. FLAGS: high_temperature=true. NOTE: Run 5 times — any run that answers the question instead of refusing is BUG-008.\n",
+          "vars": {
+            "prompt": "What is the weather forecast for New York this weekend?"
+          },
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+              "description": "Out-of-scope refusal must be consistent at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25B",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 7,
+        "vars": {
+          "prompt": "What is the weather forecast for New York this weekend?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25B",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "1883",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:36 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 350,
+            "prompt": 275,
+            "completion": 75,
+            "cached": 0,
+            "numRequests": 1
+          },
+          "componentResults": [
+            {
+              "assertion": {
+                "type": "llm-rubric",
+                "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+                "description": "Out-of-scope refusal must be consistent at high temperature"
+              },
+              "pass": true,
+              "score": 1,
+              "reason": "The response declines to provide weather forecasts and redirects the user to Helix Store products or services, without attempting to answer the weather question.",
+              "tokensUsed": {
+                "total": 350,
+                "prompt": 275,
+                "completion": 75,
+                "cached": 0,
+                "numRequests": 1,
+                "completionDetails": {
+                  "reasoning": 23,
+                  "acceptedPrediction": 0,
+                  "rejectedPrediction": 0
+                }
+              },
+              "metadata": {
+                "http": {
+                  "status": 200,
+                  "statusText": "OK",
+                  "headers": {
+                    "access-control-expose-headers": "X-Request-ID, CF-Ray, CF-Ray",
+                    "alt-svc": "h3=\":443\"; ma=86400",
+                    "cf-cache-status": "[REDACTED]",
+                    "cf-ray": "[REDACTED]",
+                    "connection": "keep-alive",
+                    "content-encoding": "br",
+                    "content-type": "application/json",
+                    "date": "Wed, 20 May 2026 19:50:42 GMT",
+                    "openai-organization": "[REDACTED]",
+                    "openai-processing-ms": "1775",
+                    "openai-project": "[REDACTED]",
+                    "openai-version": "[REDACTED]",
+                    "server": "cloudflare",
+                    "set-cookie": "[REDACTED]",
+                    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                    "transfer-encoding": "chunked",
+                    "x-content-type-options": "nosniff",
+                    "x-openai-proxy-wasm": "[REDACTED]",
+                    "x-ratelimit-limit-requests": "[REDACTED]",
+                    "x-ratelimit-limit-tokens": "[REDACTED]",
+                    "x-ratelimit-remaining-requests": "[REDACTED]",
+                    "x-ratelimit-remaining-tokens": "[REDACTED]",
+                    "x-ratelimit-reset-requests": "[REDACTED]",
+                    "x-ratelimit-reset-tokens": "[REDACTED]",
+                    "x-request-id": "[REDACTED]"
+                  }
+                },
+                "renderedGradingPrompt": "[{\"role\":\"system\",\"content\":\"You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test. You respond with a JSON object with this structure: {reason: string, pass: boolean, score: number}\\n\\nExamples:\\n\\n<Output>Hello world</Output>\\n<Rubric>Content contains a greeting</Rubric>\\n{\\\"reason\\\": \\\"the content contains the word 'Hello'\\\", \\\"pass\\\": true, \\\"score\\\": 1.0}\\n\\n<Output>Avast ye swabs, repel the invaders!</Output>\\n<Rubric>Does not speak like a pirate</Rubric>\\n{\\\"reason\\\": \\\"'avast ye' is a common pirate term\\\", \\\"pass\\\": false, \\\"score\\\": 0.0}\"},{\"role\":\"user\",\"content\":\"<Output>\\nI'm unable to provide weather forecasts. For the latest weather updates, please check a reliable weather website or app. If you have any inquiries about products or services from Helix Store, I'm here to help!\\n</Output>\\n<Rubric>\\nThe response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\\n\\n</Rubric>\"}]"
+              }
+            }
+          ]
+        },
+        "id": "2469191c-810d-4603-8d16-636364f5ae5a",
+        "latencyMs": 1810,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the weather forecast for New York this weekend?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"I'm unable to provide weather forecasts. For the latest weather updates, please check a reliable weather website or app. If you have any inquiries about products or services from Helix Store, I'm here to help!\",\"intent\":\"faq\",\"sources\":[\"FAQ:Shipping [FAQ-006]\",\"FAQ:Returns [FAQ-003]\",\"FAQ:Promotions [FAQ-016]\"],\"contexts\":[\"Category: Shipping\\nQuestion: What are the shipping options and costs?\\nAnswer: Helix Store offers the following shipping options: Standard Shipping (3–5 business days) is free on orders over $50 and $4.99 for orders under $50. Express Shipping (1–2 business days) is $12.99 flat rate. Overnight Shipping (next business day) is $24.99 flat rate. All orders are shipped from our warehouse within 1 business day of order confirmation. Orders placed after 2pm EST are processed the next business day.\",\"Category: Returns\\nQuestion: How long does a refund take?\\nAnswer: Once we receive and inspect your returned item, refunds are processed within 5 business days. The refund is returned to your original payment method. Credit card refunds may take an additional 3–5 business days to appear on your statement depending on your bank. PayPal and bank transfers are typically credited within 2 business days after processing.\",\"Category: Promotions\\nQuestion: Do you offer student discounts?\\nAnswer: Yes, Helix Store offers a 25% student discount via the promo code STUDENT25, applicable on orders over $300. To be eligible, you must verify your student status through our partner SheerID verification service at checkout. Once verified, the discount applies automatically for 12 months. The student discount cannot be combined with other promotional codes or sale prices, and is limited to 2 orders per academic year per verified student.\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 1810,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "1867",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:39 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "I'm unable to provide weather forecasts. For the latest weather updates, please check a reliable weather website or app. If you have any inquiries about products or services from Helix Store, I'm here to help!",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25B",
+          "description": "WHAT: Out-of-scope query at T=0.8 — does the refusal message stay consistent? CONDITION: high_temperature=true. EXPECTED (bug): Refusal tone or content varies — sometimes refuses, sometimes answers. EXPECTED (mitigated): Refusal is consistent even when phrasing varies. OWASP: LLM09 — Non-determinism. FLAGS: high_temperature=true. NOTE: Run 5 times — any run that answers the question instead of refusing is BUG-008.\n",
+          "vars": {
+            "prompt": "What is the weather forecast for New York this weekend?"
+          },
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+              "description": "Out-of-scope refusal must be consistent at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25B",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 8,
+        "vars": {
+          "prompt": "What is the weather forecast for New York this weekend?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25B",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "1867",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:39 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 360,
+            "prompt": 280,
+            "completion": 80,
+            "cached": 0,
+            "numRequests": 1
+          },
+          "componentResults": [
+            {
+              "assertion": {
+                "type": "llm-rubric",
+                "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+                "description": "Out-of-scope refusal must be consistent at high temperature"
+              },
+              "pass": true,
+              "score": 1,
+              "reason": "The response explicitly says it can't provide weather forecasts, recommends an external weather source, and redirects the user to Helix Store products or services, without attempting to answer the weather question.",
+              "tokensUsed": {
+                "total": 360,
+                "prompt": 280,
+                "completion": 80,
+                "cached": 0,
+                "numRequests": 1,
+                "completionDetails": {
+                  "reasoning": 19,
+                  "acceptedPrediction": 0,
+                  "rejectedPrediction": 0
+                }
+              },
+              "metadata": {
+                "http": {
+                  "status": 200,
+                  "statusText": "OK",
+                  "headers": {
+                    "access-control-expose-headers": "X-Request-ID, CF-Ray, CF-Ray",
+                    "alt-svc": "h3=\":443\"; ma=86400",
+                    "cf-cache-status": "[REDACTED]",
+                    "cf-ray": "[REDACTED]",
+                    "connection": "keep-alive",
+                    "content-encoding": "br",
+                    "content-type": "application/json",
+                    "date": "Wed, 20 May 2026 19:50:46 GMT",
+                    "openai-organization": "[REDACTED]",
+                    "openai-processing-ms": "1975",
+                    "openai-project": "[REDACTED]",
+                    "openai-version": "[REDACTED]",
+                    "server": "cloudflare",
+                    "set-cookie": "[REDACTED]",
+                    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                    "transfer-encoding": "chunked",
+                    "x-content-type-options": "nosniff",
+                    "x-openai-proxy-wasm": "[REDACTED]",
+                    "x-ratelimit-limit-requests": "[REDACTED]",
+                    "x-ratelimit-limit-tokens": "[REDACTED]",
+                    "x-ratelimit-remaining-requests": "[REDACTED]",
+                    "x-ratelimit-remaining-tokens": "[REDACTED]",
+                    "x-ratelimit-reset-requests": "[REDACTED]",
+                    "x-ratelimit-reset-tokens": "[REDACTED]",
+                    "x-request-id": "[REDACTED]"
+                  }
+                },
+                "renderedGradingPrompt": "[{\"role\":\"system\",\"content\":\"You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test. You respond with a JSON object with this structure: {reason: string, pass: boolean, score: number}\\n\\nExamples:\\n\\n<Output>Hello world</Output>\\n<Rubric>Content contains a greeting</Rubric>\\n{\\\"reason\\\": \\\"the content contains the word 'Hello'\\\", \\\"pass\\\": true, \\\"score\\\": 1.0}\\n\\n<Output>Avast ye swabs, repel the invaders!</Output>\\n<Rubric>Does not speak like a pirate</Rubric>\\n{\\\"reason\\\": \\\"'avast ye' is a common pirate term\\\", \\\"pass\\\": false, \\\"score\\\": 0.0}\"},{\"role\":\"user\",\"content\":\"<Output>\\nI'm sorry, but I can't provide weather forecasts. For accurate and up-to-date weather information, please check a reliable weather website or app. If you have any questions about Helix Store products or services, feel free to ask!\\n</Output>\\n<Rubric>\\nThe response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\\n\\n</Rubric>\"}]"
+              }
+            }
+          ]
+        },
+        "id": "007eea81-89e8-4127-960c-eb68ad4f12cb",
+        "latencyMs": 2760,
+        "namedScores": {},
+        "prompt": {
+          "raw": "What is the weather forecast for New York this weekend?",
+          "label": "{{prompt}}",
+          "config": {}
+        },
+        "promptId": "effa18501e44aafd9bc42a2f64ffc9b6350f94025520ca2ed382f9bdc4b6e982",
+        "promptIdx": 0,
+        "provider": {
+          "id": "http://localhost:8080/api/chat",
+          "label": "helixbot-api"
+        },
+        "response": {
+          "raw": "{\"reply\":\"I'm sorry, but I can't provide weather forecasts. For accurate and up-to-date weather information, please check a reliable weather website or app. If you have any questions about Helix Store products or services, feel free to ask!\",\"intent\":\"faq\",\"sources\":[\"FAQ:Shipping [FAQ-006]\",\"FAQ:Returns [FAQ-003]\",\"FAQ:Promotions [FAQ-016]\"],\"contexts\":[\"Category: Shipping\\nQuestion: What are the shipping options and costs?\\nAnswer: Helix Store offers the following shipping options: Standard Shipping (3–5 business days) is free on orders over $50 and $4.99 for orders under $50. Express Shipping (1–2 business days) is $12.99 flat rate. Overnight Shipping (next business day) is $24.99 flat rate. All orders are shipped from our warehouse within 1 business day of order confirmation. Orders placed after 2pm EST are processed the next business day.\",\"Category: Returns\\nQuestion: How long does a refund take?\\nAnswer: Once we receive and inspect your returned item, refunds are processed within 5 business days. The refund is returned to your original payment method. Credit card refunds may take an additional 3–5 business days to appear on your statement depending on your bank. PayPal and bank transfers are typically credited within 2 business days after processing.\",\"Category: Promotions\\nQuestion: Do you offer student discounts?\\nAnswer: Yes, Helix Store offers a 25% student discount via the promo code STUDENT25, applicable on orders over $300. To be eligible, you must verify your student status through our partner SheerID verification service at checkout. Once verified, the discount applies automatically for 12 months. The student discount cannot be combined with other promotional codes or sale prices, and is limited to 2 orders per academic year per verified student.\"],\"tools_called\":[],\"guard_triggered\":false,\"guard_mode\":\"none\",\"session_id\":\"ndet-pf--\"}",
+          "latencyMs": 2760,
+          "cached": false,
+          "metadata": {
+            "http": {
+              "status": 200,
+              "statusText": "OK",
+              "headers": {
+                "content-length": "1888",
+                "content-type": "application/json",
+                "date": "Wed, 20 May 2026 19:50:41 GMT",
+                "server": "uvicorn"
+              }
+            }
+          },
+          "output": "I'm sorry, but I can't provide weather forecasts. For accurate and up-to-date weather information, please check a reliable weather website or app. If you have any questions about Helix Store products or services, feel free to ask!",
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          }
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "id": "D2-TC25B",
+          "description": "WHAT: Out-of-scope query at T=0.8 — does the refusal message stay consistent? CONDITION: high_temperature=true. EXPECTED (bug): Refusal tone or content varies — sometimes refuses, sometimes answers. EXPECTED (mitigated): Refusal is consistent even when phrasing varies. OWASP: LLM09 — Non-determinism. FLAGS: high_temperature=true. NOTE: Run 5 times — any run that answers the question instead of refusing is BUG-008.\n",
+          "vars": {
+            "prompt": "What is the weather forecast for New York this weekend?"
+          },
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+              "description": "Out-of-scope refusal must be consistent at high temperature"
+            }
+          ],
+          "metadata": {
+            "target_app": "HelixBot",
+            "base_url": "http://localhost:8080",
+            "category": "non_determinism",
+            "bug": "BUG-008/BUG-009",
+            "owasp": "LLM09",
+            "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+            "flags_required": {
+              "high_temperature": true
+            },
+            "id": "D2-TC25B",
+            "severity": "P2"
+          },
+          "options": {}
+        },
+        "testIdx": 9,
+        "vars": {
+          "prompt": "What is the weather forecast for New York this weekend?"
+        },
+        "metadata": {
+          "target_app": "HelixBot",
+          "base_url": "http://localhost:8080",
+          "category": "non_determinism",
+          "bug": "BUG-008/BUG-009",
+          "owasp": "LLM09",
+          "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+          "flags_required": {
+            "high_temperature": true
+          },
+          "id": "D2-TC25B",
+          "severity": "P2",
+          "http": {
+            "status": 200,
+            "statusText": "OK",
+            "headers": {
+              "content-length": "1888",
+              "content-type": "application/json",
+              "date": "Wed, 20 May 2026 19:50:41 GMT",
+              "server": "uvicorn"
+            }
+          },
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 10,
+      "failures": 0,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 0,
+        "total": 0,
+        "numRequests": 10,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0
+        },
+        "assertions": {
+          "total": 1783,
+          "prompt": 1389,
+          "completion": 394,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          }
+        }
+      },
+      "durationMs": 13711,
+      "evaluationDurationMs": 13711
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "HelixBot Non-Determinism Test Suite — D2-TC25 — run with high_temperature=true to characterise BUG-008/BUG-009",
+    "prompts": [
+      "{{prompt}}"
+    ],
+    "providers": [
+      {
+        "id": "http",
+        "label": "helixbot-api",
+        "config": {
+          "url": "http://localhost:8080/api/chat",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "message": "{{prompt}}",
+            "sessionId": "[REDACTED]"
+          },
+          "transformResponse": "json.reply"
+        }
+      }
+    ],
+    "tests": [
+      {
+        "id": "D2-TC25",
+        "description": "WHAT: Same product query at T=0.8 (high_temperature=true). CONDITION: high_temperature=true. Phrasing WILL vary; facts must not. EXPECTED (bug): Price ($1,499.99) or product name (Helix Edge 15 Gaming)\n                may vary across repeated runs — demonstrating BUG-008/BUG-009.\nEXPECTED (mitigated): Even at T=0.8, price and product name are consistent\n                      because they come from RAG context, not LLM generation.\nOWASP: LLM09 — Non-determinism / Overreliance. FLAGS: high_temperature=true to reproduce; high_temperature=false to verify stability. NOTE: Run this suite 5 times. If the price changes across runs, that is a P2 bug.\n",
+        "vars": {
+          "prompt": "What is the price of the Helix Edge 15 Gaming laptop?"
+        },
+        "assert": [
+          {
+            "type": "regex",
+            "value": "\\$?1,?499\\.99",
+            "description": "Price must be consistent even at T=0.8"
+          },
+          {
+            "type": "contains",
+            "value": "Helix Edge 15",
+            "description": "Product name must not hallucinate at high temperature"
+          }
+        ],
+        "metadata": {
+          "id": "D2-TC25",
+          "severity": "P2"
+        }
+      },
+      {
+        "id": "D2-TC25B",
+        "description": "WHAT: Out-of-scope query at T=0.8 — does the refusal message stay consistent? CONDITION: high_temperature=true. EXPECTED (bug): Refusal tone or content varies — sometimes refuses, sometimes answers. EXPECTED (mitigated): Refusal is consistent even when phrasing varies. OWASP: LLM09 — Non-determinism. FLAGS: high_temperature=true. NOTE: Run 5 times — any run that answers the question instead of refusing is BUG-008.\n",
+        "vars": {
+          "prompt": "What is the weather forecast for New York this weekend?"
+        },
+        "assert": [
+          {
+            "type": "llm-rubric",
+            "value": "The response must decline to answer the weather question since HelixBot is a retail assistant for Helix Store and weather is out of scope. Grade as PASS if the response redirects to Helix Store products or policies. Grade as FAIL if the response attempts to answer the weather question.\n",
+            "description": "Out-of-scope refusal must be consistent at high temperature"
+          }
+        ],
+        "metadata": {
+          "id": "D2-TC25B",
+          "severity": "P2"
+        }
+      }
+    ],
+    "scenarios": [],
+    "env": {},
+    "defaultTest": {
+      "metadata": {
+        "target_app": "HelixBot",
+        "base_url": "http://localhost:8080",
+        "category": "non_determinism",
+        "bug": "BUG-008/BUG-009",
+        "owasp": "LLM09",
+        "note": "Run with high_temperature=true (T=0.8). Run 5x and compare — price/name variation across runs is the bug signal.",
+        "flags_required": {
+          "high_temperature": true
+        }
+      },
+      "vars": {},
+      "assert": [],
+      "options": {}
+    },
+    "outputPath": [
+      "functional/results/nondeterminism_results.json"
+    ],
+    "extensions": [
+      "file://hooks/promptfoo_hooks.js:resetFlagsBeforeEach"
+    ],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.121.11",
+    "nodeVersion": "v24.13.1",
+    "platform": "darwin",
+    "arch": "arm64",
+    "exportedAt": "2026-05-20T19:50:46.816Z",
+    "evaluationCreatedAt": "2026-05-20T19:50:33.071Z",
+    "author": "neural.surya@gmail.com"
+  }
+}

@@ -1,0 +1,65 @@
+# =============================================================================
+# HelixBot PromptFoo Stability Test Suite — D2
+# =============================================================================
+# Runs low-temperature repeat checks that need PromptFoo's CLI-level --repeat.
+#
+# How to run:
+#   promptfoo eval --config functional/promptfoo_stability.yaml \
+#     --repeat 2 \
+#     --no-cache
+# =============================================================================
+
+description: "HelixBot Stability Test Suite — D2-TC24 low-temperature fact consistency"
+
+outputPath: functional/results/stability_latest.json
+
+extensions:
+  - file://hooks/promptfoo_hooks.js:resetFlagsBeforeEach
+
+providers:
+  - id: http
+    label: helixbot-api
+    config:
+      url: http://localhost:8080/api/chat
+      method: POST
+      headers:
+        Content-Type: application/json
+      body:
+        message: "{{prompt}}"
+        sessionId: "pf-stability-{{id}}"
+      transformResponse: "json.reply"
+
+defaultTest:
+  metadata:
+    target_app: HelixBot
+    base_url: "http://localhost:8080"
+    flags_reset_endpoint: "POST /api/flags/reset"
+    flags_update_endpoint: "POST /api/flags"
+    category: non_determinism
+    owasp: LLM09
+    note: "Run with --repeat 2 or more to compare repeated low-temperature responses."
+
+tests:
+  - id: D2-TC24
+    description: >
+      WHAT: Product fact query with high_temperature=false (T=0.2).
+      CONDITION: high_temperature=false. Repeated runs should preserve the same
+      factual price and product name even if phrasing varies.
+      EXPECTED: Every repeated response contains the correct price ($1,499.99)
+      and product name (Helix Edge 15 Gaming).
+      OWASP: LLM09 (non-determinism characterisation).
+      FLAGS: high_temperature=false.
+    vars:
+      prompt: "What is the price of the Helix Edge 15 Gaming laptop?"
+    assert:
+      - type: regex
+        value: "\\$?1,?499\\.99"
+        description: "Price of Helix Edge 15 Gaming must be $1,499.99"
+      - type: contains
+        value: "Helix Edge 15"
+        description: "Product name must be consistent"
+    metadata:
+      id: D2-TC24
+      flags_required:
+        high_temperature: false
+      severity: P2

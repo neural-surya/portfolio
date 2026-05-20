@@ -1,0 +1,77 @@
+# =============================================================================
+# HelixBot PromptFoo Raw API Schema Test Suite — D2
+# =============================================================================
+# Runs tests that must inspect the full ChatResponse JSON envelope rather than
+# the transformed reply string used by the normal functional suite.
+#
+# How to run:
+#   promptfoo eval --config functional/promptfoo_raw.yaml --no-cache
+# =============================================================================
+
+description: "HelixBot Raw API Schema Test Suite — validates full ChatResponse JSON envelope"
+
+outputPath: functional/results/raw_latest.json
+
+extensions:
+  - file://hooks/promptfoo_hooks.js:resetFlagsBeforeEach
+
+providers:
+  - id: http
+    label: raw-api
+    config:
+      url: http://localhost:8080/api/chat
+      method: POST
+      headers:
+        Content-Type: application/json
+      body:
+        message: "{{prompt}}"
+        sessionId: "pf-raw-{{id}}"
+      # No transformResponse: assertions receive the full ChatResponse JSON.
+
+defaultTest:
+  metadata:
+    target_app: HelixBot
+    base_url: "http://localhost:8080"
+    flags_reset_endpoint: "POST /api/flags/reset"
+    flags_update_endpoint: "POST /api/flags"
+
+tests:
+  - id: D2-TC04
+    description: >
+      WHAT: Validates the full API response schema for a product inquiry.
+      CONDITION: Send a product query and inspect the raw JSON response fields.
+      EXPECTED: ChatResponse must contain: reply (str), intent="product_inquiry",
+                sources (non-empty list), contexts (non-empty list for RAGAS use).
+      OWASP: N/A — schema integrity test.
+      FLAGS: defaults.
+      NOTE: This test targets the raw API response, not the transformed reply string.
+    vars:
+      prompt: "What gaming laptops do you have?"
+    assert:
+      - type: contains-json
+        value:
+          type: object
+          required: [reply, intent, sources, contexts, guard_triggered, session_id]
+          properties:
+            reply:
+              type: string
+              minLength: 10
+            intent:
+              type: string
+              enum: [product_inquiry, order_support, faq, blocked, human_escalation]
+            sources:
+              type: array
+            contexts:
+              type: array
+              description: "Raw document passages — must be non-empty for RAGAS evaluation"
+            guard_triggered:
+              type: boolean
+            session_id:
+              type: string
+        description: "ChatResponse schema must be complete and correct"
+    metadata:
+      id: D2-TC04
+      category: product_inquiry
+      flags_required: {}
+      owasp: null
+      severity: P2
