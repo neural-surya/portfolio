@@ -1,0 +1,256 @@
+{
+  "_meta": {
+    "deliverable": "D4A",
+    "generated_at": "2026-05-22T05:04:33.554862Z",
+    "helixbot_url": "http://localhost:8080",
+    "elapsed_seconds": 119.56735033309087,
+    "qa_pairs_evaluated": 10,
+    "valid_samples": 8,
+    "excluded_from_ragas": [
+      "QA-006",
+      "QA-007"
+    ]
+  },
+  "thresholds": {
+    "faithfulness": 0.85,
+    "answer_relevancy": 0.8,
+    "context_precision": 0.75,
+    "context_recall": 0.75
+  },
+  "ci_threshold": 0.75,
+  "aggregates": {
+    "faithfulness": 0.9047619047619048,
+    "answer_relevancy": 0.980044336704704,
+    "context_precision": 0.749999999925,
+    "context_recall": 0.96875
+  },
+  "threshold_results": {
+    "faithfulness": {
+      "score": 0.9047619047619048,
+      "threshold": 0.85,
+      "passed": true
+    },
+    "answer_relevancy": {
+      "score": 0.980044336704704,
+      "threshold": 0.8,
+      "passed": true
+    },
+    "context_precision": {
+      "score": 0.749999999925,
+      "threshold": 0.75,
+      "passed": true
+    },
+    "context_recall": {
+      "score": 0.96875,
+      "threshold": 0.75,
+      "passed": true
+    }
+  },
+  "overall_pass": true,
+  "per_sample": [
+    {
+      "qa_id": "QA-001",
+      "category": "product_inquiry",
+      "question": "What is the price of the Helix Pro 15 laptop?",
+      "answer": "The price of the Helix Pro 15 laptop is $1299.99.",
+      "ground_truth": "The Helix Pro 15 laptop is priced at $1,299.99.",
+      "sources": [
+        "Helix Pro 15 [HX-LP-001]",
+        "Helix Book 13 [HX-LP-006]",
+        "Helix Edge 15 Gaming [HX-LP-005]",
+        "Helix Air 13 [HX-LP-002]",
+        "Helix Flex 14 2-in-1 [HX-LP-004]"
+      ],
+      "contexts": [
+        "Product Name: Helix Pro 15\nProduct ID: HX-LP-001\nCategory: Laptop\nPrice: $1299.99\nStock: 12 units available\nWarranty: 2 year(s)\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\nSpecifications:\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\n  storage: 512GB PCIe Gen4 NVMe SSD\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\n  battery: 72Wh, up to 8 hours\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\n  os: Windows 11 Pro\n  webcam: 1080p FHD with IR camera for Windows Hello\n  weight: 2.1 kg",
+        "Product Name: Helix Book 13\nProduct ID: HX-LP-006\nCategory: Laptop\nPrice: $649.99\nStock: 15 units available\nWarranty: 1 year(s)\nDescription: The Helix Book 13 is an entry-level 13.3-inch laptop offering reliable everyday performance at an accessible price. A solid choice for students, remote workers, and anyone who needs dependable productivity without the premium price tag.\nSpecifications:\n  display: 13.3-inch FHD 1920x1080 IPS 250 nits\n  processor: Intel Core i3-1315U (6 cores, up to 4.5 GHz)\n  ram: 8GB LPDDR5\n  storage: 256GB PCIe Gen3 NVMe SSD\n  gpu: Intel UHD Graphics\n  battery: 42Wh, up to 9 hours\n  ports: 1x USB-C, 2x USB-A 3.2, HDMI 1.4, 3.5mm audio, microSD\n  connectivity: Wi-Fi 6, Bluetooth 5.2\n  os: Windows 11 Home\n  webcam: 720p HD\n  weight: 1.4 kg",
+        "Product Name: Helix Edge 15 Gaming\nProduct ID: HX-LP-005\nCategory: Laptop\nPrice: $1499.99\nStock: 9 units available\nWarranty: 2 year(s)\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\nSpecifications:\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\n  storage: 1TB PCIe Gen4 NVMe SSD\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\n  os: Windows 11 Home\n  webcam: 1080p FHD\n  weight: 2.4 kg",
+        "Product Name: Helix Air 13\nProduct ID: HX-LP-002\nCategory: Laptop\nPrice: $999.99\nStock: 8 units available\nWarranty: 1 year(s)\nDescription: The Helix Air 13 is an ultra-thin 13.5-inch laptop weighing just 1.2 kg, designed for professionals on the move. The 2K IPS display delivers sharp visuals, while the Intel Core i5-1340P ensures responsive performance for everyday productivity and light creative tasks.\nSpecifications:\n  display: 13.5-inch 2560x1440 IPS 400 nits\n  processor: Intel Core i5-1340P (12 cores, up to 4.6 GHz)\n  ram: 16GB LPDDR5-5200 (soldered)\n  storage: 512GB PCIe Gen4 NVMe SSD\n  gpu: Intel Iris Xe Graphics\n  battery: 56Wh, up to 12 hours\n  ports: 2x Thunderbolt 4, 1x USB-A 3.2, 3.5mm audio, microSD\n  connectivity: Wi-Fi 6E, Bluetooth 5.3\n  os: Windows 11 Home\n  webcam: 1080p FHD\n  weight: 1.2 kg",
+        "Product Name: Helix Flex 14 2-in-1\nProduct ID: HX-LP-004\nCategory: Laptop\nPrice: $849.99\nStock: 6 units available\nWarranty: 1 year(s)\nDescription: The Helix Flex 14 is a versatile 2-in-1 convertible with a 360-degree hinge, 14-inch FHD touchscreen, and stylus support. Ideal for students and creatives who need the flexibility of a laptop and tablet in one device.\nSpecifications:\n  display: 14-inch FHD 1920x1080 IPS Touch 300 nits\n  processor: Intel Core i5-1335U (10 cores, up to 4.6 GHz)\n  ram: 16GB LPDDR5\n  storage: 512GB PCIe Gen3 NVMe SSD\n  gpu: Intel Iris Xe Graphics\n  battery: 52Wh, up to 10 hours\n  ports: 2x USB-C (one Thunderbolt 4), 2x USB-A 3.2, HDMI 1.4, microSD\n  connectivity: Wi-Fi 6, Bluetooth 5.2\n  os: Windows 11 Home\n  webcam: 1080p FHD with IR camera\n  weight: 1.6 kg"
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9999999999999999,
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "qa_id": "QA-002",
+      "category": "product_inquiry",
+      "question": "What is the cheapest phone in the Helix Store catalog?",
+      "answer": "The cheapest phone in the Helix Store catalog is the Helix Go, priced at $299.99. It features a 6.5-inch LCD display, a 5000mAh battery, and a 13MP camera, making it suitable for everyday use.",
+      "ground_truth": "The Helix Go is the most affordable phone at $299.99.",
+      "sources": [
+        "Helix Go [HX-PH-006]",
+        "Helix X2 [HX-PH-005]",
+        "Helix X1 Lite [HX-PH-003]",
+        "Helix X1 [HX-PH-002]",
+        "Helix Home Hub [HX-SH-001]"
+      ],
+      "contexts": [
+        "Product Name: Helix Go\nProduct ID: HX-PH-006\nCategory: Phone\nPrice: $299.99\nStock: 35 units available\nWarranty: 1 year(s)\nDescription: The Helix Go is a budget smartphone that delivers reliable everyday performance. With a 6.5-inch LCD display, 5000mAh battery, and 13MP camera, it is ideal for first-time smartphone users or as a secondary device.\nSpecifications:\n  display: 6.5-inch LCD 1600x720 60Hz 450 nits\n  processor: Helix B1e (6nm, 8 cores)\n  ram: 4GB LPDDR4X\n  storage: 64GB eMMC (expandable via microSD up to 512GB)\n  camera: 13MP f/2.0 main\n  front_camera: 5MP f/2.2\n  battery: 5000mAh, 18W wired\n  os: Helix OS 14 Go Edition\n  connectivity: 4G LTE, Wi-Fi 5, Bluetooth 5.0, USB-C 2.0\n  biometrics: Rear fingerprint\n  dimensions: 165 x 76 x 8.9mm, 200g",
+        "Product Name: Helix X2\nProduct ID: HX-PH-005\nCategory: Phone\nPrice: $699.99\nStock: 18 units available\nWarranty: 1 year(s)\nDescription: The Helix X2 offers a premium LCD display with 120Hz refresh, a versatile 64MP triple-camera system, and a large 5000mAh battery \u2014 all powered by the Helix B1 chip. A well-rounded mid-range smartphone for users who want more without paying flagship prices.\nSpecifications:\n  display: 6.6-inch LCD 2408x1080 120Hz 650 nits\n  processor: Helix B1 (6nm, 8 cores)\n  ram: 8GB LPDDR4X\n  storage: 128GB UFS 2.2\n  camera: 64MP f/1.8 main + 8MP ultrawide + 2MP macro\n  front_camera: 16MP f/2.0\n  battery: 5000mAh, 33W wired\n  os: Helix OS 14 (Android 14 base)\n  connectivity: 5G, Wi-Fi 6, Bluetooth 5.1, NFC, USB-C 2.0\n  biometrics: Side-mounted fingerprint\n  dimensions: 163 x 75 x 8.5mm, 195g\n  ip_rating: IP52",
+        "Product Name: Helix X1 Lite\nProduct ID: HX-PH-003\nCategory: Phone\nPrice: $499.99\nStock: 30 units available\nWarranty: 1 year(s)\nDescription: The Helix X1 Lite brings OLED display quality and a capable 48MP camera system to the mid-range segment. Powered by the efficient Helix A1e chip, it offers smooth performance for everyday tasks and a 4500mAh battery that easily lasts a full day.\nSpecifications:\n  display: 6.4-inch OLED 2340x1080 90Hz 700 nits\n  processor: Helix A1e (5nm, 8 cores)\n  ram: 6GB LPDDR4X\n  storage: 128GB UFS 2.2\n  camera: 48MP f/1.8 main + 8MP f/2.2 ultrawide\n  front_camera: 16MP f/2.0\n  battery: 4500mAh, 33W wired\n  os: Helix OS 14 (Android 14 base)\n  connectivity: 5G, Wi-Fi 6, Bluetooth 5.1, NFC, USB-C 2.0\n  biometrics: Side-mounted fingerprint\n  dimensions: 158 x 72 x 7.7mm, 175g\n  ip_rating: IP52",
+        "Product Name: Helix X1\nProduct ID: HX-PH-002\nCategory: Phone\nPrice: $799.99\nStock: 25 units available\nWarranty: 1 year(s)\nDescription: The Helix X1 delivers the flagship Helix A1 chip and AMOLED display experience at a more accessible price. With a 50MP dual-camera system and 4800mAh battery with 45W fast charging, it strikes the ideal balance between performance and value.\nSpecifications:\n  display: 6.5-inch AMOLED 2400x1080 120Hz 800 nits\n  processor: Helix A1 (4nm, 8 cores)\n  ram: 8GB LPDDR5\n  storage: 128GB UFS 3.1\n  camera: 50MP f/1.8 main + 12MP f/2.2 ultrawide\n  front_camera: 12MP f/2.2\n  battery: 4800mAh, 45W wired, 15W wireless\n  os: Helix OS 14 (Android 14 base)\n  connectivity: 5G, Wi-Fi 6, Bluetooth 5.2, NFC, USB-C 2.0\n  biometrics: Side-mounted fingerprint + face unlock\n  dimensions: 160 x 73 x 7.9mm, 185g\n  ip_rating: IP67",
+        "Product Name: Helix Home Hub\nProduct ID: HX-SH-001\nCategory: Smart Home\nPrice: $199.99\nStock: 9 units available\nWarranty: 2 year(s)\nDescription: The Helix Home Hub is the central controller for your smart home ecosystem. With a 7-inch touchscreen, built-in voice assistant, and support for Zigbee, Z-Wave, and Wi-Fi protocols, it connects and controls over 1,000 compatible smart home devices.\nSpecifications:\n  display: 7-inch IPS touchscreen 1280x800\n  protocols: Zigbee 3.0, Z-Wave Plus, Wi-Fi 6, Bluetooth 5.2, Thread, Matter\n  voice_assistant: Built-in Helix Voice (compatible with third-party assistants)\n  processing: Quad-core 1.8GHz, 2GB RAM, 16GB storage\n  connectivity: Ethernet + Wi-Fi 6 + Zigbee + Z-Wave radios\n  power: 12V DC adapter (included)\n  compatible_devices: 1,000+ certified Helix smart home devices"
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9722467850436108,
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "qa_id": "QA-003",
+      "category": "product_inquiry",
+      "question": "Which laptop is best for gaming at Helix Store?",
+      "answer": "The best laptop for gaming at Helix Store is the **Helix Edge 15 Gaming**. It features:\n\n- **Display**: 15.6-inch QHD 2560x1440 IPS, 165Hz\n- **Processor**: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\n- **Graphics**: NVIDIA GeForce RTX 4060 with 8GB GDDR6\n- **RAM**: 32GB DDR5-4800 (upgradeable to 64GB)\n- **Storage**: 1TB PCIe Gen4 NVMe SSD\n- **Battery Life**: Up to 5 hours (gaming)\n- **Weight**: 2.4 kg\n\nThis laptop is specifically designed for high-performance gaming, ensuring an immersive experience. If you need more information or assistance with purchasing, feel free to ask!",
+      "ground_truth": "The Helix Edge 15 Gaming laptop is designed for gaming, priced at $1,499.99.",
+      "sources": [
+        "Helix Edge 15 Gaming [HX-LP-005]",
+        "Helix Pro 15 [HX-LP-001]",
+        "Helix Book 13 [HX-LP-006]",
+        "Helix Air 13 [HX-LP-002]",
+        "Helix Flex 14 2-in-1 [HX-LP-004]"
+      ],
+      "contexts": [
+        "Product Name: Helix Edge 15 Gaming\nProduct ID: HX-LP-005\nCategory: Laptop\nPrice: $1499.99\nStock: 9 units available\nWarranty: 2 year(s)\nDescription: The Helix Edge 15 is a high-performance gaming laptop with a 165Hz QHD display, Intel Core i7-13700HX, and NVIDIA RTX 4060. Featuring advanced thermal management with dual fans and six heat pipes, it sustains peak performance during extended gaming sessions.\nSpecifications:\n  display: 15.6-inch QHD 2560x1440 IPS 165Hz 3ms 300 nits\n  processor: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\n  ram: 32GB DDR5-4800 (upgradeable to 64GB)\n  storage: 1TB PCIe Gen4 NVMe SSD\n  gpu: NVIDIA GeForce RTX 4060 8GB GDDR6\n  battery: 80Wh, up to 5 hours (gaming), 8 hours (office)\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, RJ-45 2.5GbE, SD card\n  connectivity: Wi-Fi 6E, Bluetooth 5.3, 2.5GbE Ethernet\n  os: Windows 11 Home\n  webcam: 1080p FHD\n  weight: 2.4 kg",
+        "Product Name: Helix Pro 15\nProduct ID: HX-LP-001\nCategory: Laptop\nPrice: $1299.99\nStock: 12 units available\nWarranty: 2 year(s)\nDescription: The Helix Pro 15 is a professional 15.6-inch laptop built for developers and content creators. Powered by the Intel Core i7-13700H with 14 cores and NVIDIA RTX 3060 discrete graphics, it handles intensive workloads with ease. Includes Thunderbolt 4, Wi-Fi 6E, and a 72Wh battery lasting up to 8 hours.\nSpecifications:\n  display: 15.6-inch FHD 1920x1080 IPS Anti-Glare 300 nits\n  processor: Intel Core i7-13700H (14 cores, up to 5.0 GHz)\n  ram: 16GB DDR5-4800 (upgradeable to 64GB)\n  storage: 512GB PCIe Gen4 NVMe SSD\n  gpu: NVIDIA GeForce RTX 3060 6GB GDDR6\n  battery: 72Wh, up to 8 hours\n  ports: 2x Thunderbolt 4, 3x USB-A 3.2, HDMI 2.1, SD card reader, 3.5mm audio\n  connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3\n  os: Windows 11 Pro\n  webcam: 1080p FHD with IR camera for Windows Hello\n  weight: 2.1 kg",
+        "Product Name: Helix Book 13\nProduct ID: HX-LP-006\nCategory: Laptop\nPrice: $649.99\nStock: 15 units available\nWarranty: 1 year(s)\nDescription: The Helix Book 13 is an entry-level 13.3-inch laptop offering reliable everyday performance at an accessible price. A solid choice for students, remote workers, and anyone who needs dependable productivity without the premium price tag.\nSpecifications:\n  display: 13.3-inch FHD 1920x1080 IPS 250 nits\n  processor: Intel Core i3-1315U (6 cores, up to 4.5 GHz)\n  ram: 8GB LPDDR5\n  storage: 256GB PCIe Gen3 NVMe SSD\n  gpu: Intel UHD Graphics\n  battery: 42Wh, up to 9 hours\n  ports: 1x USB-C, 2x USB-A 3.2, HDMI 1.4, 3.5mm audio, microSD\n  connectivity: Wi-Fi 6, Bluetooth 5.2\n  os: Windows 11 Home\n  webcam: 720p HD\n  weight: 1.4 kg",
+        "Product Name: Helix Air 13\nProduct ID: HX-LP-002\nCategory: Laptop\nPrice: $999.99\nStock: 8 units available\nWarranty: 1 year(s)\nDescription: The Helix Air 13 is an ultra-thin 13.5-inch laptop weighing just 1.2 kg, designed for professionals on the move. The 2K IPS display delivers sharp visuals, while the Intel Core i5-1340P ensures responsive performance for everyday productivity and light creative tasks.\nSpecifications:\n  display: 13.5-inch 2560x1440 IPS 400 nits\n  processor: Intel Core i5-1340P (12 cores, up to 4.6 GHz)\n  ram: 16GB LPDDR5-5200 (soldered)\n  storage: 512GB PCIe Gen4 NVMe SSD\n  gpu: Intel Iris Xe Graphics\n  battery: 56Wh, up to 12 hours\n  ports: 2x Thunderbolt 4, 1x USB-A 3.2, 3.5mm audio, microSD\n  connectivity: Wi-Fi 6E, Bluetooth 5.3\n  os: Windows 11 Home\n  webcam: 1080p FHD\n  weight: 1.2 kg",
+        "Product Name: Helix Flex 14 2-in-1\nProduct ID: HX-LP-004\nCategory: Laptop\nPrice: $849.99\nStock: 6 units available\nWarranty: 1 year(s)\nDescription: The Helix Flex 14 is a versatile 2-in-1 convertible with a 360-degree hinge, 14-inch FHD touchscreen, and stylus support. Ideal for students and creatives who need the flexibility of a laptop and tablet in one device.\nSpecifications:\n  display: 14-inch FHD 1920x1080 IPS Touch 300 nits\n  processor: Intel Core i5-1335U (10 cores, up to 4.6 GHz)\n  ram: 16GB LPDDR5\n  storage: 512GB PCIe Gen3 NVMe SSD\n  gpu: Intel Iris Xe Graphics\n  battery: 52Wh, up to 10 hours\n  ports: 2x USB-C (one Thunderbolt 4), 2x USB-A 3.2, HDMI 1.4, microSD\n  connectivity: Wi-Fi 6, Bluetooth 5.2\n  os: Windows 11 Home\n  webcam: 1080p FHD with IR camera\n  weight: 1.6 kg"
+      ],
+      "scores": {
+        "faithfulness": 0.3333333333333333,
+        "answer_relevancy": 0.9936708067747042,
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "qa_id": "QA-004",
+      "category": "faq_policy",
+      "question": "What is the return window for products purchased at Helix Store?",
+      "answer": "The return window for products purchased at Helix Store is 30 days from the date of delivery. Items must be returned in original condition with all accessories, manuals, and original packaging.",
+      "ground_truth": "Helix Store offers a 30-day return window for most products in their original condition.",
+      "sources": [
+        "FAQ:Returns [FAQ-001]",
+        "FAQ:Returns [FAQ-002]",
+        "FAQ:Shipping [FAQ-006]"
+      ],
+      "contexts": [
+        "Category: Returns\nQuestion: What is the return policy?\nAnswer: Helix Store offers a 30-day return policy on all products from the date of delivery. Items must be returned in original condition with all accessories, manuals, and original packaging. Electronics that have been opened are eligible for return only if defective or if the wrong item was delivered. Opened non-defective electronics are not eligible for return. Return shipping is free for defective or incorrectly shipped items. For change-of-mind returns, the customer is responsible for return shipping costs.",
+        "Category: Returns\nQuestion: How do I start a return?\nAnswer: To initiate a return, contact HelixBot and provide your order ID (format: ORD-YYYY-NNN) and the reason for your return. HelixBot will create a return request and email a prepaid shipping label to your registered email address for eligible returns. For orders over $500, identity verification via your registered email is required before a return can be processed. Once the item is received and inspected, refunds are processed within 5 business days.",
+        "Category: Shipping\nQuestion: What are the shipping options and costs?\nAnswer: Helix Store offers the following shipping options: Standard Shipping (3\u20135 business days) is free on orders over $50 and $4.99 for orders under $50. Express Shipping (1\u20132 business days) is $12.99 flat rate. Overnight Shipping (next business day) is $24.99 flat rate. All orders are shipped from our warehouse within 1 business day of order confirmation. Orders placed after 2pm EST are processed the next business day."
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "qa_id": "QA-005",
+      "category": "faq_policy",
+      "question": "Does Helix Store offer free shipping and what is the threshold?",
+      "answer": "Yes, Helix Store offers free Standard Shipping on orders over $50. For orders under $50, the Standard Shipping cost is $4.99.",
+      "ground_truth": "Helix Store offers free standard shipping on orders over $50. Express shipping is available at an additional cost.",
+      "sources": [
+        "FAQ:Shipping [FAQ-006]",
+        "FAQ:Promotions [FAQ-016]",
+        "FAQ:Shipping [FAQ-007]"
+      ],
+      "contexts": [
+        "Category: Shipping\nQuestion: What are the shipping options and costs?\nAnswer: Helix Store offers the following shipping options: Standard Shipping (3\u20135 business days) is free on orders over $50 and $4.99 for orders under $50. Express Shipping (1\u20132 business days) is $12.99 flat rate. Overnight Shipping (next business day) is $24.99 flat rate. All orders are shipped from our warehouse within 1 business day of order confirmation. Orders placed after 2pm EST are processed the next business day.",
+        "Category: Promotions\nQuestion: Do you offer student discounts?\nAnswer: Yes, Helix Store offers a 25% student discount via the promo code STUDENT25, applicable on orders over $300. To be eligible, you must verify your student status through our partner SheerID verification service at checkout. Once verified, the discount applies automatically for 12 months. The student discount cannot be combined with other promotional codes or sale prices, and is limited to 2 orders per academic year per verified student.",
+        "Category: Shipping\nQuestion: Do you ship internationally?\nAnswer: Helix Store currently ships within the United States and Canada only. International shipping to other countries is not available at this time. For US orders, all 50 states including Alaska and Hawaii are covered. For Canada, standard shipping rates apply with an additional $5 handling fee and estimated delivery of 5\u20138 business days. Import duties and taxes for Canadian orders are the responsibility of the recipient."
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9183417837417317,
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "qa_id": "QA-008",
+      "category": "product_inquiry",
+      "question": "What tablets are available at Helix Store and what are their prices?",
+      "answer": "At Helix Store, the following tablets are available:\n\n1. **Helix Pad 10.9**\n   - Price: $549.99\n\n2. **Helix Pad E-Ink**\n   - Price: $349.99\n\n3. **Helix Pad Mini 8.3**\n   - Price: $449.99\n\nIf you need more information about any specific tablet, feel free to ask!",
+      "ground_truth": "Helix Store has five tablets: Helix Pad Pro 12.9 at $899.99, Helix Pad Pro 11 at $699.99, Helix Pad 10.9 at $549.99, Helix Pad Mini 8.3 at $449.99, and Helix Pad E-Ink at $349.99.",
+      "sources": [
+        "Helix Pad 10.9 [HX-TB-003]",
+        "Helix Go [HX-PH-006]",
+        "Helix Pad E-Ink [HX-TB-005]",
+        "Helix Pad Mini 8.3 [HX-TB-004]",
+        "Helix X2 [HX-PH-005]"
+      ],
+      "contexts": [
+        "Product Name: Helix Pad 10.9\nProduct ID: HX-TB-003\nCategory: Tablet\nPrice: $549.99\nStock: 14 units available\nWarranty: 1 year(s)\nDescription: The Helix Pad 10.9 is a versatile mid-range tablet with a 10.9-inch IPS display, USB-C connectivity, and support for the Helix Pro Stylus. Ideal for browsing, streaming, reading, and light creative work.\nSpecifications:\n  display: 10.9-inch IPS 2360x1640 60Hz 500 nits\n  processor: Helix A14 (5nm, 6 cores)\n  ram: 4GB\n  storage: 64GB (expandable via microSD)\n  connectivity: Wi-Fi 6, Bluetooth 5.2, USB-C 2.0\n  cameras: 8MP rear, 12MP ultrawide front\n  battery: Up to 10 hours\n  dimensions: 248.6 x 179.5 x 6.3mm, 477g",
+        "Product Name: Helix Go\nProduct ID: HX-PH-006\nCategory: Phone\nPrice: $299.99\nStock: 35 units available\nWarranty: 1 year(s)\nDescription: The Helix Go is a budget smartphone that delivers reliable everyday performance. With a 6.5-inch LCD display, 5000mAh battery, and 13MP camera, it is ideal for first-time smartphone users or as a secondary device.\nSpecifications:\n  display: 6.5-inch LCD 1600x720 60Hz 450 nits\n  processor: Helix B1e (6nm, 8 cores)\n  ram: 4GB LPDDR4X\n  storage: 64GB eMMC (expandable via microSD up to 512GB)\n  camera: 13MP f/2.0 main\n  front_camera: 5MP f/2.2\n  battery: 5000mAh, 18W wired\n  os: Helix OS 14 Go Edition\n  connectivity: 4G LTE, Wi-Fi 5, Bluetooth 5.0, USB-C 2.0\n  biometrics: Rear fingerprint\n  dimensions: 165 x 76 x 8.9mm, 200g",
+        "Product Name: Helix Pad E-Ink\nProduct ID: HX-TB-005\nCategory: Tablet\nPrice: $349.99\nStock: 8 units available\nWarranty: 1 year(s)\nDescription: The Helix Pad E-Ink features a 10.3-inch E Ink Carta 1200 display for the most paper-like reading experience available. The Helix E1 chip enables smooth page turns and note-taking, while the 3-month battery life makes it ideal for avid readers and students.\nSpecifications:\n  display: 10.3-inch E Ink Carta 1200 2480x1860 300ppi\n  processor: Helix E1 (low-power, 4 cores)\n  ram: 4GB\n  storage: 64GB\n  connectivity: Wi-Fi 6, Bluetooth 5.0, USB-C 2.0\n  stylus: Compatible with Helix Pro Stylus for handwriting\n  battery: Up to 3 months (typical use)\n  dimensions: 229 x 175 x 5.8mm, 403g",
+        "Product Name: Helix Pad Mini 8.3\nProduct ID: HX-TB-004\nCategory: Tablet\nPrice: $449.99\nStock: 11 units available\nWarranty: 1 year(s)\nDescription: The Helix Pad Mini 8.3 packs a stunning 8.3-inch Liquid Retina display and the Helix A15 chip into a pocketable form factor. Perfect for reading, gaming, and on-the-go productivity.\nSpecifications:\n  display: 8.3-inch Liquid Retina 2266x1488 60Hz 500 nits\n  processor: Helix A15 (5nm, 6 cores)\n  ram: 4GB\n  storage: 64GB\n  connectivity: Wi-Fi 6, Bluetooth 5.2, USB-C 2.0\n  cameras: 8MP rear, 12MP ultrawide front\n  battery: Up to 10 hours\n  dimensions: 195.4 x 134.8 x 6.3mm, 297g",
+        "Product Name: Helix X2\nProduct ID: HX-PH-005\nCategory: Phone\nPrice: $699.99\nStock: 18 units available\nWarranty: 1 year(s)\nDescription: The Helix X2 offers a premium LCD display with 120Hz refresh, a versatile 64MP triple-camera system, and a large 5000mAh battery \u2014 all powered by the Helix B1 chip. A well-rounded mid-range smartphone for users who want more without paying flagship prices.\nSpecifications:\n  display: 6.6-inch LCD 2408x1080 120Hz 650 nits\n  processor: Helix B1 (6nm, 8 cores)\n  ram: 8GB LPDDR4X\n  storage: 128GB UFS 2.2\n  camera: 64MP f/1.8 main + 8MP ultrawide + 2MP macro\n  front_camera: 16MP f/2.0\n  battery: 5000mAh, 33W wired\n  os: Helix OS 14 (Android 14 base)\n  connectivity: 5G, Wi-Fi 6, Bluetooth 5.1, NFC, USB-C 2.0\n  biometrics: Side-mounted fingerprint\n  dimensions: 163 x 75 x 8.5mm, 195g\n  ip_rating: IP52"
+      ],
+      "scores": {
+        "faithfulness": NaN,
+        "answer_relevancy": 0.9958177898723769,
+        "context_precision": 0.0,
+        "context_recall": 0.75
+      }
+    },
+    {
+      "qa_id": "QA-009",
+      "category": "faq_policy",
+      "question": "What warranty does a Helix laptop come with?",
+      "answer": "Helix laptops come with a 2-year manufacturer warranty that covers defects in materials and workmanship. However, this warranty does not cover damage caused by accidents, unauthorized modifications, water damage beyond the rated IP protection, or normal wear and tear.",
+      "ground_truth": "Helix laptops come with a 2-year manufacturer warranty covering defects in materials and workmanship. The warranty does not cover accidents, unauthorised modifications, water damage beyond rated IP protection, or normal wear and tear.",
+      "sources": [
+        "FAQ:Warranty [FAQ-004]",
+        "FAQ:Warranty [FAQ-005]",
+        "FAQ:Technical Support [FAQ-018]"
+      ],
+      "contexts": [
+        "Category: Warranty\nQuestion: What does the warranty cover?\nAnswer: Helix Store products come with a manufacturer warranty covering defects in materials and workmanship. Laptops, desktops, and smart home hubs include a 2-year warranty. All other products include a 1-year warranty. The warranty does not cover damage caused by accidents, unauthorised modifications, water damage beyond the rated IP protection, or normal wear and tear. To make a warranty claim, contact support@helixstore.com with your order ID, proof of purchase, and a description of the defect.",
+        "Category: Warranty\nQuestion: How do I make a warranty claim?\nAnswer: To make a warranty claim, email support@helixstore.com with: (1) your order ID in format ORD-YYYY-NNN, (2) proof of purchase, (3) a description and photo or video of the defect. Our support team will respond within 2 business days. If the defect is confirmed, we will send a prepaid return label and a replacement unit or issue a full refund at your choice. Physical damage from drops, impacts, or unauthorised repair attempts will void the warranty.",
+        "Category: Technical Support\nQuestion: Can I get my product repaired out of warranty?\nAnswer: Yes, Helix Store offers out-of-warranty repair services for most Helix products. Contact support@helixstore.com with your product model and a description of the issue to receive a repair quote. Typical turnaround is 7\u201310 business days from receipt of the device. Repair costs depend on the type of damage and parts required. A diagnostic fee of $49 applies if you decline the repair after receiving the quote. Helix Store is not responsible for data loss during repair \u2014 back up your data before sending in your device."
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9713888232528397,
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "qa_id": "QA-010",
+      "category": "product_inquiry",
+      "question": "What is the difference between the Helix X1 Pro and the Helix X1?",
+      "answer": "The Helix X1 Pro and Helix X1 differ in several key areas:\n\n1. **Display**:\n   - **Helix X1 Pro**: 6.7-inch AMOLED, 2400x1080 resolution, 120Hz refresh rate, 1000 nits peak brightness.\n   - **Helix X1**: 6.5-inch AMOLED, 2400x1080 resolution, 120Hz refresh rate, 800 nits brightness.\n\n2. **Camera System**:\n   - **Helix X1 Pro**: Triple-camera setup (50MP main + 12MP ultrawide + 10MP 5x optical zoom).\n   - **Helix X1**: Dual-camera setup (50MP main + 12MP ultrawide).\n\n3. **Battery**:\n   - **Helix X1 Pro**: 5000mAh battery with 65W fast charging.\n   - **Helix X1**: 4800mAh battery with 45W fast charging.\n\n4. **RAM and Storage**:\n   - **Helix X1 Pro**: 12GB RAM and 256GB storage.\n   - **Helix X1**: 8GB RAM and 128GB storage.\n\n5. **Weight and Dimensions**:\n   - **Helix X1 Pro**: Weighs 210g, dimensions are 164 x 75 x 8.2mm.\n   - **Helix X1**: Weighs 185g, dimensions are 160 x 73 x 7.9mm.\n\nIn summary, the Helix X1 Pro offers a larger display, a more advanced camera system, a bigger battery, and more RAM and storage compared to the Helix X1.",
+      "ground_truth": "The Helix X1 Pro is $999.99 and is the premium flagship phone with advanced camera and performance features. The Helix X1 is $799.99 and offers core flagship features at a lower price.",
+      "sources": [
+        "Helix X1 Pro [HX-PH-001]",
+        "Helix X1 [HX-PH-002]",
+        "Helix X1 Lite [HX-PH-003]",
+        "Helix X2 [HX-PH-005]",
+        "Helix Pro Stylus [HX-AC-001]"
+      ],
+      "contexts": [
+        "Product Name: Helix X1 Pro\nProduct ID: HX-PH-001\nCategory: Phone\nPrice: $999.99\nStock: 20 units available\nWarranty: 1 year(s)\nDescription: The Helix X1 Pro is our flagship smartphone featuring a 6.7-inch AMOLED display with 120Hz adaptive refresh, the Helix A1 Pro chip with a dedicated neural engine, a versatile triple-camera system with 50MP main sensor and optical zoom, and 5000mAh battery with 65W fast charging.\nSpecifications:\n  display: 6.7-inch AMOLED 2400x1080 120Hz 1000 nits peak\n  processor: Helix A1 Pro (4nm, 8 cores)\n  ram: 12GB LPDDR5X\n  storage: 256GB UFS 3.1\n  camera: 50MP f/1.8 main + 12MP f/2.2 ultrawide + 10MP f/3.0 5x optical zoom\n  front_camera: 12MP f/2.0 with autofocus\n  battery: 5000mAh, 65W wired, 15W wireless, 5W reverse wireless\n  os: Helix OS 14 (Android 14 base)\n  connectivity: 5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C 3.2\n  biometrics: Under-display fingerprint + face unlock\n  dimensions: 164 x 75 x 8.2mm, 210g\n  ip_rating: IP68",
+        "Product Name: Helix X1\nProduct ID: HX-PH-002\nCategory: Phone\nPrice: $799.99\nStock: 25 units available\nWarranty: 1 year(s)\nDescription: The Helix X1 delivers the flagship Helix A1 chip and AMOLED display experience at a more accessible price. With a 50MP dual-camera system and 4800mAh battery with 45W fast charging, it strikes the ideal balance between performance and value.\nSpecifications:\n  display: 6.5-inch AMOLED 2400x1080 120Hz 800 nits\n  processor: Helix A1 (4nm, 8 cores)\n  ram: 8GB LPDDR5\n  storage: 128GB UFS 3.1\n  camera: 50MP f/1.8 main + 12MP f/2.2 ultrawide\n  front_camera: 12MP f/2.2\n  battery: 4800mAh, 45W wired, 15W wireless\n  os: Helix OS 14 (Android 14 base)\n  connectivity: 5G, Wi-Fi 6, Bluetooth 5.2, NFC, USB-C 2.0\n  biometrics: Side-mounted fingerprint + face unlock\n  dimensions: 160 x 73 x 7.9mm, 185g\n  ip_rating: IP67",
+        "Product Name: Helix X1 Lite\nProduct ID: HX-PH-003\nCategory: Phone\nPrice: $499.99\nStock: 30 units available\nWarranty: 1 year(s)\nDescription: The Helix X1 Lite brings OLED display quality and a capable 48MP camera system to the mid-range segment. Powered by the efficient Helix A1e chip, it offers smooth performance for everyday tasks and a 4500mAh battery that easily lasts a full day.\nSpecifications:\n  display: 6.4-inch OLED 2340x1080 90Hz 700 nits\n  processor: Helix A1e (5nm, 8 cores)\n  ram: 6GB LPDDR4X\n  storage: 128GB UFS 2.2\n  camera: 48MP f/1.8 main + 8MP f/2.2 ultrawide\n  front_camera: 16MP f/2.0\n  battery: 4500mAh, 33W wired\n  os: Helix OS 14 (Android 14 base)\n  connectivity: 5G, Wi-Fi 6, Bluetooth 5.1, NFC, USB-C 2.0\n  biometrics: Side-mounted fingerprint\n  dimensions: 158 x 72 x 7.7mm, 175g\n  ip_rating: IP52",
+        "Product Name: Helix X2\nProduct ID: HX-PH-005\nCategory: Phone\nPrice: $699.99\nStock: 18 units available\nWarranty: 1 year(s)\nDescription: The Helix X2 offers a premium LCD display with 120Hz refresh, a versatile 64MP triple-camera system, and a large 5000mAh battery \u2014 all powered by the Helix B1 chip. A well-rounded mid-range smartphone for users who want more without paying flagship prices.\nSpecifications:\n  display: 6.6-inch LCD 2408x1080 120Hz 650 nits\n  processor: Helix B1 (6nm, 8 cores)\n  ram: 8GB LPDDR4X\n  storage: 128GB UFS 2.2\n  camera: 64MP f/1.8 main + 8MP ultrawide + 2MP macro\n  front_camera: 16MP f/2.0\n  battery: 5000mAh, 33W wired\n  os: Helix OS 14 (Android 14 base)\n  connectivity: 5G, Wi-Fi 6, Bluetooth 5.1, NFC, USB-C 2.0\n  biometrics: Side-mounted fingerprint\n  dimensions: 163 x 75 x 8.5mm, 195g\n  ip_rating: IP52",
+        "Product Name: Helix Pro Stylus\nProduct ID: HX-AC-001\nCategory: Accessory\nPrice: $129.99\nStock: 22 units available\nWarranty: 1 year(s)\nDescription: The Helix Pro Stylus offers pixel-perfect precision with 4096 levels of pressure sensitivity and tilt detection. It magnetically attaches and wirelessly charges on compatible Helix Pad models. Ideal for note-taking, sketching, and design work.\nSpecifications:\n  pressure_levels: 4096\n  tilt_detection: Yes\n  latency: 9ms\n  charging: Magnetic wireless charging on Helix Pad Pro (12.9, 11) and Helix Pad E-Ink\n  battery: Up to 12 hours per charge\n  compatibility: Helix Pad Pro 12.9, Helix Pad Pro 11, Helix Pad 10.9, Helix Pad Mini 8.3, Helix Pad E-Ink"
+      ],
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9888887049523695,
+        "context_precision": 0.0,
+        "context_recall": 1.0
+      }
+    }
+  ]
+}

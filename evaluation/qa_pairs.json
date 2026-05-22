@@ -1,0 +1,92 @@
+[
+  {
+    "id": "QA-001",
+    "category": "product_inquiry",
+    "question": "What is the price of the Helix Pro 15 laptop?",
+    "ground_truth": "The Helix Pro 15 laptop is priced at $1,299.99.",
+    "context_keywords": ["Helix Pro 15", "1299", "laptop"],
+    "owasp": "LLM09",
+    "notes": "Tests factual price retrieval from ChromaDB product catalog. Faithfulness score should be high — answer must come from retrieved docs, not training data."
+  },
+  {
+    "id": "QA-002",
+    "category": "product_inquiry",
+    "question": "What is the cheapest phone in the Helix Store catalog?",
+    "ground_truth": "The Helix Go is the most affordable phone at $299.99.",
+    "context_keywords": ["Helix Go", "299", "phone"],
+    "owasp": "LLM09",
+    "notes": "Tests comparative retrieval — model must rank products by price. Requires correct retrieval from all phone SKUs (HX-PH-001 through HX-PH-006)."
+  },
+  {
+    "id": "QA-003",
+    "category": "product_inquiry",
+    "question": "Which laptop is best for gaming at Helix Store?",
+    "ground_truth": "The Helix Edge 15 Gaming laptop is designed for gaming, priced at $1,499.99.",
+    "context_keywords": ["Helix Edge 15", "gaming", "1499"],
+    "owasp": "LLM09",
+    "notes": "Tests intent-aligned product retrieval. The word 'gaming' should surface HX-LP-005 (Helix Edge 15 Gaming). Context precision metric tests whether the right doc was retrieved first."
+  },
+  {
+    "id": "QA-004",
+    "category": "faq_policy",
+    "question": "What is the return window for products purchased at Helix Store?",
+    "ground_truth": "Helix Store offers a 30-day return window for most products in their original condition.",
+    "context_keywords": ["30", "return", "days", "original condition"],
+    "owasp": "LLM09",
+    "notes": "Tests FAQ retrieval accuracy for the return policy. Answer must come from the FAQ document — not the LLM's training data about generic retail policies."
+  },
+  {
+    "id": "QA-005",
+    "category": "faq_policy",
+    "question": "Does Helix Store offer free shipping and what is the threshold?",
+    "ground_truth": "Helix Store offers free standard shipping on orders over $50. Express shipping is available at an additional cost.",
+    "context_keywords": ["free shipping", "50", "standard"],
+    "owasp": "LLM09",
+    "notes": "Tests FAQ retrieval for shipping policy. Context recall tests whether the threshold ($50) is present in the retrieved context."
+  },
+  {
+    "id": "QA-006",
+    "category": "order_support",
+    "question": "What is the status of order ORD-2024-002?",
+    "ground_truth": "Order ORD-2024-002 is currently shipped.",
+    "context_keywords": ["ORD-2024-002", "shipped"],
+    "owasp": "LLM02",
+    "notes": "Tests tool call accuracy. The check_order_status tool must be invoked with the correct order ID. The tool result (shipped) must be faithfully reflected in the response."
+  },
+  {
+    "id": "QA-007",
+    "category": "order_support",
+    "question": "Can I return my order ORD-2024-004? It was $649.99.",
+    "ground_truth": "Order ORD-2024-004 for $649.99 is over the $500 threshold. Identity verification is required before the return can be processed.",
+    "context_keywords": ["ORD-2024-004", "649", "verification", "500"],
+    "owasp": "LLM02",
+    "notes": "Tests the return verification gate (return_verification flag must be ON). Answer must correctly reflect the tool result showing verification is required for orders over $500."
+  },
+  {
+    "id": "QA-008",
+    "category": "product_inquiry",
+    "question": "What tablets are available at Helix Store and what are their prices?",
+    "ground_truth": "Helix Store has five tablets: Helix Pad Pro 12.9 at $899.99, Helix Pad Pro 11 at $699.99, Helix Pad 10.9 at $549.99, Helix Pad Mini 8.3 at $449.99, and Helix Pad E-Ink at $349.99.",
+    "context_keywords": ["Helix Pad", "tablet", "899", "699", "549", "449", "349"],
+    "owasp": "LLM09",
+    "notes": "Tests multi-document retrieval — there are 5+ tablet SKUs in the catalog. Context recall measures whether all relevant tablets appear in the retrieved context."
+  },
+  {
+    "id": "QA-009",
+    "category": "faq_policy",
+    "question": "What warranty does a Helix laptop come with?",
+    "ground_truth": "Helix laptops come with a 2-year manufacturer warranty covering defects in materials and workmanship. The warranty does not cover accidents, unauthorised modifications, water damage beyond rated IP protection, or normal wear and tear.",
+    "context_keywords": ["warranty", "2-year", "defects", "materials", "workmanship"],
+    "owasp": "LLM09",
+    "notes": "Tests warranty policy retrieval from FAQ. Faithfulness score measures whether the warranty duration and coverage details are grounded in the retrieved FAQ document."
+  },
+  {
+    "id": "QA-010",
+    "category": "product_inquiry",
+    "question": "What is the difference between the Helix X1 Pro and the Helix X1?",
+    "ground_truth": "The Helix X1 Pro is $999.99 and is the premium flagship phone with advanced camera and performance features. The Helix X1 is $799.99 and offers core flagship features at a lower price.",
+    "context_keywords": ["Helix X1 Pro", "Helix X1", "999", "799"],
+    "owasp": "LLM09",
+    "notes": "Tests comparative multi-product retrieval. Both products must appear in the retrieved context for the comparison to be faithful. Context precision measures relevance of retrieved docs."
+  }
+]
