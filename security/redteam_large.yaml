@@ -17,7 +17,7 @@
 #   process-wide state, this suite must run serially.
 #
 # Results: security/results/latest.json
-# Vulnerability report: security/reports/vulnerability_report.md
+# Vulnerability report: security/reports/vulnerability_report_findings.md
 #
 # OWASP LLM Top 10 Coverage:
 #   LLM01 — Prompt Injection            → promptInjection plugin

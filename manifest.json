@@ -1,0 +1,228 @@
+{
+  "_comment": "Portfolio manifest \u2014 parsed by the capstone portfolio website to render deliverables, test results, and bug reports. Keep this file in sync with actual artifacts.",
+  "project": {
+    "title": "HelixBot LLM Testing Capstone",
+    "track": "Track 2A \u2014 LLM Testing Essentials",
+    "session": 10,
+    "author": "Surya Kanta",
+    "email": "suryakanta.dev@gmail.com",
+    "cohort": "May 2026",
+    "target_app": {
+      "name": "HelixBot",
+      "description": "Production-style AI retail assistant for Helix Store",
+      "stack": [
+        "FastAPI",
+        "ChromaDB",
+        "OpenAI",
+        "Docker"
+      ],
+      "url": "http://localhost:8080",
+      "health_endpoint": "/health",
+      "image": "docker.io/suryakanta87/helixbot:latest",
+      "runtime": "docker compose"
+    },
+    "total_hours": 18.5,
+    "status": "complete"
+  },
+  "deliverables": [
+    {
+      "id": "D1",
+      "title": "Test Strategy Document",
+      "file": "strategy/test_strategy.md",
+      "hours": 2,
+      "status": "complete",
+      "summary": "Risk-based test strategy covering 5 HelixBot components across 7 LLM challenge areas"
+    },
+    {
+      "id": "D2",
+      "title": "PromptFoo Test Suite",
+      "file": "functional/promptfoo.yaml",
+      "hours": 4,
+      "status": "complete",
+      "summary": "25 annotated test cases across 2 providers, 5 assertion types, 8 categories",
+      "metrics": {
+        "total_tests": 25,
+        "providers": [
+          "helixbot-api",
+          "direct-llm"
+        ],
+        "assertion_types": [
+          "contains",
+          "not-contains",
+          "regex",
+          "json-schema",
+          "llm-rubric"
+        ],
+        "categories": [
+          "product_inquiry",
+          "order_support",
+          "faq_policy",
+          "promo_codes",
+          "safety_guard",
+          "hallucination",
+          "bias",
+          "non_determinism"
+        ],
+        "results_file": "functional/results/latest.json"
+      }
+    },
+    {
+      "id": "D3",
+      "title": "Red Team Report",
+      "file": "security/redteam_large.yaml",
+      "report": "security/reports/vulnerability_report_findings.md",
+      "hours": 4,
+      "status": "complete",
+      "summary": "100+ adversarial tests across 6 plugins, OWASP LLM Top 10 mapped",
+      "metrics": {
+        "min_tests": 100,
+        "plugins": [
+          "promptInjection",
+          "jailbreak",
+          "systemPromptLeakage",
+          "piiLeakage",
+          "hallucination",
+          "ragPoisoning"
+        ],
+        "results_file": "security/results/latest.json"
+      }
+    },
+    {
+      "id": "D4",
+      "title": "Evaluation",
+      "options": {
+        "A": {
+          "title": "RAGAS Evaluation",
+          "file": "evaluation/test_ragas_eval.py",
+          "data": "evaluation/qa_pairs.json",
+          "report": "evaluation/reports/eval_report.md",
+          "metrics": {
+            "qa_pairs": 10,
+            "metrics": [
+              "faithfulness",
+              "answer_relevancy",
+              "context_precision",
+              "context_recall"
+            ],
+            "thresholds": {
+              "faithfulness": 0.85,
+              "answer_relevancy": 0.8,
+              "context_precision": 0.75,
+              "context_recall": 0.75
+            },
+            "results_file": "evaluation/results/ragas_scores.json"
+          }
+        },
+        "B": {
+          "title": "Function Calling Contract Tests",
+          "file": "evaluation/test_function_calling.py",
+          "metrics": {
+            "tools": [
+              "check_order_status",
+              "check_inventory",
+              "initiate_return",
+              "apply_promo_code"
+            ],
+            "test_cases": [
+              "valid_call",
+              "missing_field",
+              "wrong_type",
+              "injection_attempt",
+              "flag_controlled"
+            ],
+            "results_file": "evaluation/results/contract_results.json"
+          }
+        }
+      },
+      "hours": 3,
+      "status": "complete"
+    },
+    {
+      "id": "D5",
+      "title": "GitHub Actions Pipeline",
+      "file": ".github/workflows/capstone-pipeline.yml",
+      "hours": 2,
+      "status": "complete",
+      "summary": "4 blocking quality gates on every push",
+      "metrics": {
+        "gates": [
+          {
+            "name": "Health Check",
+            "threshold": "200 OK",
+            "blocking": true
+          },
+          {
+            "name": "Safety Pass Rate",
+            "threshold": ">=95%",
+            "blocking": true
+          },
+          {
+            "name": "PromptFoo Pass Rate",
+            "threshold": ">=80%",
+            "blocking": true
+          },
+          {
+            "name": "RAGAS Faithfulness",
+            "threshold": ">=0.75",
+            "blocking": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "D6",
+      "title": "Bug Report Portfolio + Stakeholder Summary",
+      "index": "bugs/index.json",
+      "hours": 3.5,
+      "status": "complete",
+      "summary": "Minimum 4 high-signal bugs with OWASP mapping, severity distribution, and stakeholder summary",
+      "metrics": {
+        "minimum_required_bugs": 4,
+        "total_bugs": 4,
+        "severity_distribution": {
+          "P1": 2,
+          "P2": 2
+        },
+        "owasp_coverage": [
+          "LLM01",
+          "LLM02",
+          "LLM09"
+        ]
+      }
+    }
+  ],
+  "skills_demonstrated": [
+    {
+      "skill": "Test strategy authoring",
+      "deliverable": "D1"
+    },
+    {
+      "skill": "PromptFoo fluency",
+      "deliverable": "D2"
+    },
+    {
+      "skill": "Adversarial / red team thinking",
+      "deliverable": "D3"
+    },
+    {
+      "skill": "RAG evaluation with RAGAS",
+      "deliverable": "D4A"
+    },
+    {
+      "skill": "Function calling contract testing",
+      "deliverable": "D4B"
+    },
+    {
+      "skill": "CI/CD quality gate automation",
+      "deliverable": "D5"
+    },
+    {
+      "skill": "AI bug classification and severity",
+      "deliverable": "D6"
+    },
+    {
+      "skill": "Non-technical stakeholder communication",
+      "deliverable": "D6"
+    }
+  ]
+}

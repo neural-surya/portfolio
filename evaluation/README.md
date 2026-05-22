@@ -198,7 +198,7 @@ The script generates one of three recommendation styles:
 | --- | --- |
 | `PASS` | All portfolio RAGAS thresholds passed. |
 | `BLOCK` | The CI faithfulness gate failed. Do not promote the build. |
-| `CONDITIONAL` | CI faithfulness passed, but one or more portfolio metrics failed. Suitable for demo/non-production only until remediated. |
+| `CONDITIONAL` | CI faithfulness passed, but one or more portfolio metrics failed. Suitable for non-production use only until remediated. |
 
 ## Troubleshooting
 

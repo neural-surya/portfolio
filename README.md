@@ -32,12 +32,21 @@ portfolio/
 │   ├── redteam_generated.yaml
 │   ├── reports/
 │   └── results/
+├── bugs/                              # Bug portfolio and stakeholder summary
+│   ├── bug_001.md
+│   ├── bug_002.md
+│   ├── bug_003.md
+│   ├── bug_005.md
+│   ├── index.json
+│   └── stakeholder_summary.md
 ├── evaluation/                        # RAGAS evaluation only
 │   ├── test_ragas_eval.py
 │   ├── qa_pairs.json
 │   ├── README.md
 │   └── results/
 ├── strategy/                          # Test strategy document
+├── manifest.json                      # Portfolio metadata
+├── capstone.html                      # Static portfolio page
 └── .github/workflows/
     └── capstone-pipeline.yml          # CI quality gates
 ```

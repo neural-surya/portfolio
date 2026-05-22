@@ -165,7 +165,7 @@ promptfoo redteam report \
 Manual vulnerability write-up:
 
 ```text
-security/reports/vulnerability_report.md
+security/reports/vulnerability_report_findings.md
 ```
 
 ## Important Distinction

@@ -11,12 +11,12 @@ reference: ai_test_strategy_real_life_v2.md
 tags: [strategy, risk-based, llm-testing, owasp, 7-challenges]
 ---
 
-# LLM Testing — Risk-Based Test Strategy
+# HelixBot LLM Testing — Risk-Based Test Strategy
 
-**Project:** LLM Testing Capstone  
-**Track:** LLM Testing Essentials  
-**Author:** Suryakanta Mohapatra 
-**Date:** 2026-05-20  
+**Project:** HelixBot LLM Testing Capstone  
+**Track:** 2A — LLM Testing Essentials  
+**Author:** Surya Kanta | Cohort May 2026  
+**Date:** 2026-05-15  
 **Access level:** Gray box — system prompt readable, RAG pipeline inspectable, model weights inaccessible
 
 ---
@@ -351,7 +351,7 @@ Four blocking gates run on every push (defined in `.github/workflows/capstone-pi
 | Stakeholder | Format | Key Information | Delivery |
 |-------------|--------|----------------|---------|
 | Engineering / QA | PromptFoo HTML report (CI artifact) | Failed assertions, flag state at failure, reproduction steps, RAGAS per-sample scores | After every test run automatically |
-| Product Owner | 1-page stakeholder summary (`bugs/stakeholder_summary.md`) | Traffic-light per risk area, 10 bugs in plain English, action table | Pre-launch |
+| Product Owner | 1-page stakeholder summary (`bugs/stakeholder_summary.md`) | Traffic-light per risk area, minimum 4 high-signal bugs in plain English, action table | Pre-launch |
 | Portfolio reviewer | Machine-readable JSON (`*/results/latest.json`, `bugs/index.json`, `manifest.json`) | All deliverable metadata, bug index, metric scores for website rendering | Always up to date |
 
 ---
@@ -370,14 +370,13 @@ Four blocking gates run on every push (defined in `.github/workflows/capstone-pi
 | Stakeholder summary (non-technical) | Suryakanta | ✅ Complete |
 | RAGAS scores populated (eval run) | Suryakanta | 🔲 Pending — run `python evaluation/test_ragas_eval.py` |
 | PromptFoo results populated (eval run) | Suryakanta | 🔲 Pending — run `promptfoo eval --config functional/promptfoo.yaml` |
-| Demo video recorded | Suryakanta | 🔲 Pending — see `demo/demo_video.md` |
 
 ---
 
 ## 14. Assumptions and Constraints
 
 **Assumptions:**
-- HelixBot runs locally on `http://localhost:8000` for all tests — no remote staging environment
+- HelixBot runs locally on `http://localhost:8080` from the public Docker image `docker.io/suryakanta87/helixbot:latest`.
 - OpenAI API key is available and has sufficient quota for all test suites
 - Feature flags are reset to defaults (`POST /api/flags/reset`) between test suites
 - ChromaDB data matches `helixbot/app/data/products.json` and `faq.json` exactly (no external sync)
