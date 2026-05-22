@@ -239,7 +239,46 @@ def check_thresholds(aggregates: dict) -> dict:
     return results
 
 
-def print_report(aggregates: dict, threshold_results: dict, elapsed: float) -> None:
+def deployment_recommendation(aggregates: dict, threshold_results: dict) -> str:
+    """Generate a one-paragraph deployment recommendation from RAGAS results."""
+    failed = [
+        metric
+        for metric, result in threshold_results.items()
+        if not result["passed"]
+    ]
+    ci_faith = aggregates.get("faithfulness", 0.0)
+
+    if not failed:
+        return (
+            "Deployment recommendation: PASS for RAG-grounded release readiness. "
+            "All portfolio RAGAS thresholds passed, including faithfulness, answer relevancy, "
+            "context precision, and context recall. HelixBot can proceed to the next deployment "
+            "stage with hallucination_guard, sanitize_context, and return_verification enabled; "
+            "continue monitoring generated answers and retrieved sources in regression runs."
+        )
+
+    if ci_faith + EPSILON < CI_THRESHOLD:
+        return (
+            "Deployment recommendation: BLOCK deployment. The CI faithfulness gate failed, "
+            "which means HelixBot's answers are not sufficiently grounded in retrieved context. "
+            "Do not promote this build until retrieval quality, grounding prompts, and the failing "
+            f"RAGAS metrics ({', '.join(failed)}) are remediated and the evaluation is rerun."
+        )
+
+    return (
+        "Deployment recommendation: CONDITIONAL approval for non-production/demo use only. "
+        "The CI faithfulness gate passed, but one or more portfolio RAGAS thresholds failed "
+        f"({', '.join(failed)}). Keep production promotion blocked until these metrics are "
+        "improved or the evaluation set is intentionally re-scoped with documented rationale."
+    )
+
+
+def print_report(
+    aggregates: dict,
+    threshold_results: dict,
+    elapsed: float,
+    recommendation: str,
+) -> None:
     """Print a formatted console report."""
     print("\n" + "=" * 60)
     print("RAGAS EVALUATION RESULTS — HelixBot D4A")
@@ -259,6 +298,7 @@ def print_report(aggregates: dict, threshold_results: dict, elapsed: float) -> N
     ci_faith = aggregates.get("faithfulness", 0.0)
     ci_status = "PASS" if ci_faith + EPSILON >= CI_THRESHOLD else "FAIL"
     print(f"\n  CI Gate — faithfulness >= {CI_THRESHOLD}: {ci_faith:.3f} → {ci_status}")
+    print(f"\n  {recommendation}")
     print("=" * 60)
 
 
@@ -267,6 +307,7 @@ def save_results(
     ragas_output: dict,
     threshold_results: dict,
     elapsed: float,
+    recommendation: str,
 ) -> None:
     """Save full results to JSON for portfolio website integration."""
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -293,6 +334,7 @@ def save_results(
         "aggregates": ragas_output["aggregates"],
         "threshold_results": threshold_results,
         "overall_pass": all(d["passed"] for d in threshold_results.values()),
+        "deployment_recommendation": recommendation,
         "per_sample": ragas_output["per_sample"],
     }
 
@@ -361,13 +403,22 @@ async def main() -> None:
 
     # Check thresholds
     threshold_results = check_thresholds(ragas_output["aggregates"])
+    recommendation = deployment_recommendation(
+        ragas_output["aggregates"],
+        threshold_results,
+    )
 
     # Print report
-    print_report(ragas_output["aggregates"], threshold_results, elapsed)
+    print_report(
+        ragas_output["aggregates"],
+        threshold_results,
+        elapsed,
+        recommendation,
+    )
 
     # Save results
     print("\nStep 3 — Saving results...")
-    save_results(collected, ragas_output, threshold_results, elapsed)
+    save_results(collected, ragas_output, threshold_results, elapsed, recommendation)
 
     # Exit with failure code if CI faithfulness gate fails
     ci_faith = ragas_output["aggregates"].get("faithfulness", 0.0)

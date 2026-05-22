@@ -1,0 +1,14 @@
+services:
+  helixbot:
+    image: ${HELIXBOT_IMAGE:-suryakanta87/helixbot:latest}
+    container_name: helixbot
+    ports:
+      - "8080:8000"
+    env_file:
+      - .env
+    volumes:
+      - helixbot_chroma_data:/helixbot/chroma_db
+    restart: unless-stopped
+
+volumes:
+  helixbot_chroma_data:

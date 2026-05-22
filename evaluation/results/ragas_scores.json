@@ -1,9 +1,9 @@
 {
   "_meta": {
     "deliverable": "D4A",
-    "generated_at": "2026-05-22T05:04:33.554862Z",
+    "generated_at": "2026-05-22T07:07:19.501772Z",
     "helixbot_url": "http://localhost:8080",
-    "elapsed_seconds": 119.56735033309087,
+    "elapsed_seconds": 81.13863816694357,
     "qa_pairs_evaluated": 10,
     "valid_samples": 8,
     "excluded_from_ragas": [
@@ -19,19 +19,19 @@
   },
   "ci_threshold": 0.75,
   "aggregates": {
-    "faithfulness": 0.9047619047619048,
-    "answer_relevancy": 0.980044336704704,
+    "faithfulness": 0.9427083333333333,
+    "answer_relevancy": 0.9750057126434717,
     "context_precision": 0.749999999925,
     "context_recall": 0.96875
   },
   "threshold_results": {
     "faithfulness": {
-      "score": 0.9047619047619048,
+      "score": 0.9427083333333333,
       "threshold": 0.85,
       "passed": true
     },
     "answer_relevancy": {
-      "score": 0.980044336704704,
+      "score": 0.9750057126434717,
       "threshold": 0.8,
       "passed": true
     },
@@ -47,6 +47,7 @@
     }
   },
   "overall_pass": true,
+  "deployment_recommendation": "Deployment recommendation: PASS for RAG-grounded release readiness. All portfolio RAGAS thresholds passed, including faithfulness, answer relevancy, context precision, and context recall. HelixBot can proceed to the next deployment stage with hallucination_guard, sanitize_context, and return_verification enabled; continue monitoring generated answers and retrieved sources in regression runs.",
   "per_sample": [
     {
       "qa_id": "QA-001",
@@ -79,7 +80,7 @@
       "qa_id": "QA-002",
       "category": "product_inquiry",
       "question": "What is the cheapest phone in the Helix Store catalog?",
-      "answer": "The cheapest phone in the Helix Store catalog is the Helix Go, priced at $299.99. It features a 6.5-inch LCD display, a 5000mAh battery, and a 13MP camera, making it suitable for everyday use.",
+      "answer": "The cheapest phone in the Helix Store catalog is the Helix Go, priced at $299.99. It offers reliable everyday performance with a 6.5-inch LCD display, a 5000mAh battery, and a 13MP camera.",
       "ground_truth": "The Helix Go is the most affordable phone at $299.99.",
       "sources": [
         "Helix Go [HX-PH-006]",
@@ -97,7 +98,7 @@
       ],
       "scores": {
         "faithfulness": 1.0,
-        "answer_relevancy": 0.9722467850436108,
+        "answer_relevancy": 0.9999999999999997,
         "context_precision": 0.9999999999,
         "context_recall": 1.0
       }
@@ -106,7 +107,7 @@
       "qa_id": "QA-003",
       "category": "product_inquiry",
       "question": "Which laptop is best for gaming at Helix Store?",
-      "answer": "The best laptop for gaming at Helix Store is the **Helix Edge 15 Gaming**. It features:\n\n- **Display**: 15.6-inch QHD 2560x1440 IPS, 165Hz\n- **Processor**: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\n- **Graphics**: NVIDIA GeForce RTX 4060 with 8GB GDDR6\n- **RAM**: 32GB DDR5-4800 (upgradeable to 64GB)\n- **Storage**: 1TB PCIe Gen4 NVMe SSD\n- **Battery Life**: Up to 5 hours (gaming)\n- **Weight**: 2.4 kg\n\nThis laptop is specifically designed for high-performance gaming, ensuring an immersive experience. If you need more information or assistance with purchasing, feel free to ask!",
+      "answer": "The best laptop for gaming at Helix Store is the **Helix Edge 15 Gaming**. It offers:\n\n- **Processor**: Intel Core i7-13700HX (16 cores, up to 5.0 GHz)\n- **Graphics**: NVIDIA GeForce RTX 4060 (8GB GDDR6)\n- **Display**: 15.6-inch QHD (2560x1440) IPS, 165Hz refresh rate\n- **RAM**: 32GB DDR5-4800 (upgradeable to 64GB)\n- **Storage**: 1TB PCIe Gen4 NVMe SSD\n\nThis laptop is designed for high-performance gaming with advanced thermal management to keep it cool during long sessions. If you need more information or want to check its availability, just let me know!",
       "ground_truth": "The Helix Edge 15 Gaming laptop is designed for gaming, priced at $1,499.99.",
       "sources": [
         "Helix Edge 15 Gaming [HX-LP-005]",
@@ -123,7 +124,7 @@
         "Product Name: Helix Flex 14 2-in-1\nProduct ID: HX-LP-004\nCategory: Laptop\nPrice: $849.99\nStock: 6 units available\nWarranty: 1 year(s)\nDescription: The Helix Flex 14 is a versatile 2-in-1 convertible with a 360-degree hinge, 14-inch FHD touchscreen, and stylus support. Ideal for students and creatives who need the flexibility of a laptop and tablet in one device.\nSpecifications:\n  display: 14-inch FHD 1920x1080 IPS Touch 300 nits\n  processor: Intel Core i5-1335U (10 cores, up to 4.6 GHz)\n  ram: 16GB LPDDR5\n  storage: 512GB PCIe Gen3 NVMe SSD\n  gpu: Intel Iris Xe Graphics\n  battery: 52Wh, up to 10 hours\n  ports: 2x USB-C (one Thunderbolt 4), 2x USB-A 3.2, HDMI 1.4, microSD\n  connectivity: Wi-Fi 6, Bluetooth 5.2\n  os: Windows 11 Home\n  webcam: 1080p FHD with IR camera\n  weight: 1.6 kg"
       ],
       "scores": {
-        "faithfulness": 0.3333333333333333,
+        "faithfulness": 0.6666666666666666,
         "answer_relevancy": 0.9936708067747042,
         "context_precision": 0.9999999999,
         "context_recall": 1.0
@@ -133,7 +134,7 @@
       "qa_id": "QA-004",
       "category": "faq_policy",
       "question": "What is the return window for products purchased at Helix Store?",
-      "answer": "The return window for products purchased at Helix Store is 30 days from the date of delivery. Items must be returned in original condition with all accessories, manuals, and original packaging.",
+      "answer": "Helix Store offers a 30-day return policy on all products from the date of delivery. Items must be returned in original condition with all accessories, manuals, and original packaging.",
       "ground_truth": "Helix Store offers a 30-day return window for most products in their original condition.",
       "sources": [
         "FAQ:Returns [FAQ-001]",
@@ -147,7 +148,7 @@
       ],
       "scores": {
         "faithfulness": 1.0,
-        "answer_relevancy": 1.0,
+        "answer_relevancy": 0.9463888143367135,
         "context_precision": 0.9999999999,
         "context_recall": 1.0
       }
@@ -156,7 +157,7 @@
       "qa_id": "QA-005",
       "category": "faq_policy",
       "question": "Does Helix Store offer free shipping and what is the threshold?",
-      "answer": "Yes, Helix Store offers free Standard Shipping on orders over $50. For orders under $50, the Standard Shipping cost is $4.99.",
+      "answer": "Yes, Helix Store offers free standard shipping on orders over $50. For orders under $50, the standard shipping cost is $4.99.",
       "ground_truth": "Helix Store offers free standard shipping on orders over $50. Express shipping is available at an additional cost.",
       "sources": [
         "FAQ:Shipping [FAQ-006]",
@@ -179,7 +180,7 @@
       "qa_id": "QA-008",
       "category": "product_inquiry",
       "question": "What tablets are available at Helix Store and what are their prices?",
-      "answer": "At Helix Store, the following tablets are available:\n\n1. **Helix Pad 10.9**\n   - Price: $549.99\n\n2. **Helix Pad E-Ink**\n   - Price: $349.99\n\n3. **Helix Pad Mini 8.3**\n   - Price: $449.99\n\nIf you need more information about any specific tablet, feel free to ask!",
+      "answer": "At Helix Store, the following tablets are available:\n\n1. **Helix Pad 10.9**\n   - Price: $549.99\n\n2. **Helix Pad E-Ink**\n   - Price: $349.99\n\n3. **Helix Pad Mini 8.3**\n   - Price: $449.99\n\nIf you need more details about any specific tablet, just let me know!",
       "ground_truth": "Helix Store has five tablets: Helix Pad Pro 12.9 at $899.99, Helix Pad Pro 11 at $699.99, Helix Pad 10.9 at $549.99, Helix Pad Mini 8.3 at $449.99, and Helix Pad E-Ink at $349.99.",
       "sources": [
         "Helix Pad 10.9 [HX-TB-003]",
@@ -196,8 +197,8 @@
         "Product Name: Helix X2\nProduct ID: HX-PH-005\nCategory: Phone\nPrice: $699.99\nStock: 18 units available\nWarranty: 1 year(s)\nDescription: The Helix X2 offers a premium LCD display with 120Hz refresh, a versatile 64MP triple-camera system, and a large 5000mAh battery \u2014 all powered by the Helix B1 chip. A well-rounded mid-range smartphone for users who want more without paying flagship prices.\nSpecifications:\n  display: 6.6-inch LCD 2408x1080 120Hz 650 nits\n  processor: Helix B1 (6nm, 8 cores)\n  ram: 8GB LPDDR4X\n  storage: 128GB UFS 2.2\n  camera: 64MP f/1.8 main + 8MP ultrawide + 2MP macro\n  front_camera: 16MP f/2.0\n  battery: 5000mAh, 33W wired\n  os: Helix OS 14 (Android 14 base)\n  connectivity: 5G, Wi-Fi 6, Bluetooth 5.1, NFC, USB-C 2.0\n  biometrics: Side-mounted fingerprint\n  dimensions: 163 x 75 x 8.5mm, 195g\n  ip_rating: IP52"
       ],
       "scores": {
-        "faithfulness": NaN,
-        "answer_relevancy": 0.9958177898723769,
+        "faithfulness": 0.875,
+        "answer_relevancy": 0.9813667680894155,
         "context_precision": 0.0,
         "context_recall": 0.75
       }
@@ -206,7 +207,7 @@
       "qa_id": "QA-009",
       "category": "faq_policy",
       "question": "What warranty does a Helix laptop come with?",
-      "answer": "Helix laptops come with a 2-year manufacturer warranty that covers defects in materials and workmanship. However, this warranty does not cover damage caused by accidents, unauthorized modifications, water damage beyond the rated IP protection, or normal wear and tear.",
+      "answer": "Helix laptops come with a 2-year manufacturer warranty that covers defects in materials and workmanship. Please note that this warranty does not cover damage caused by accidents, unauthorized modifications, water damage beyond the rated IP protection, or normal wear and tear.",
       "ground_truth": "Helix laptops come with a 2-year manufacturer warranty covering defects in materials and workmanship. The warranty does not cover accidents, unauthorised modifications, water damage beyond rated IP protection, or normal wear and tear.",
       "sources": [
         "FAQ:Warranty [FAQ-004]",
@@ -229,7 +230,7 @@
       "qa_id": "QA-010",
       "category": "product_inquiry",
       "question": "What is the difference between the Helix X1 Pro and the Helix X1?",
-      "answer": "The Helix X1 Pro and Helix X1 differ in several key areas:\n\n1. **Display**:\n   - **Helix X1 Pro**: 6.7-inch AMOLED, 2400x1080 resolution, 120Hz refresh rate, 1000 nits peak brightness.\n   - **Helix X1**: 6.5-inch AMOLED, 2400x1080 resolution, 120Hz refresh rate, 800 nits brightness.\n\n2. **Camera System**:\n   - **Helix X1 Pro**: Triple-camera setup (50MP main + 12MP ultrawide + 10MP 5x optical zoom).\n   - **Helix X1**: Dual-camera setup (50MP main + 12MP ultrawide).\n\n3. **Battery**:\n   - **Helix X1 Pro**: 5000mAh battery with 65W fast charging.\n   - **Helix X1**: 4800mAh battery with 45W fast charging.\n\n4. **RAM and Storage**:\n   - **Helix X1 Pro**: 12GB RAM and 256GB storage.\n   - **Helix X1**: 8GB RAM and 128GB storage.\n\n5. **Weight and Dimensions**:\n   - **Helix X1 Pro**: Weighs 210g, dimensions are 164 x 75 x 8.2mm.\n   - **Helix X1**: Weighs 185g, dimensions are 160 x 73 x 7.9mm.\n\nIn summary, the Helix X1 Pro offers a larger display, a more advanced camera system, a bigger battery, and more RAM and storage compared to the Helix X1.",
+      "answer": "The Helix X1 Pro and Helix X1 differ in several key specifications:\n\n1. **Display**:\n   - **Helix X1 Pro**: 6.7-inch AMOLED, 2400x1080, 120Hz, 1000 nits peak brightness.\n   - **Helix X1**: 6.5-inch AMOLED, 2400x1080, 120Hz, 800 nits brightness.\n\n2. **Camera**:\n   - **Helix X1 Pro**: Triple-camera system (50MP main, 12MP ultrawide, 10MP 5x optical zoom).\n   - **Helix X1**: Dual-camera system (50MP main, 12MP ultrawide).\n\n3. **Battery**:\n   - **Helix X1 Pro**: 5000mAh battery with 65W fast charging.\n   - **Helix X1**: 4800mAh battery with 45W fast charging.\n\n4. **RAM and Storage**:\n   - **Helix X1 Pro**: 12GB RAM, 256GB storage.\n   - **Helix X1**: 8GB RAM, 128GB storage.\n\n5. **Weight and Dimensions**:\n   - **Helix X1 Pro**: 210g, dimensions 164 x 75 x 8.2mm.\n   - **Helix X1**: 185g, dimensions 160 x 73 x 7.9mm.\n\n6. **Price**:\n   - **Helix X1 Pro**: $999.99.\n   - **Helix X1**: $799.99.\n\nThese differences highlight the Helix X1 Pro as a more advanced option with superior features, while the Helix X1 provides great performance at a lower price point.",
       "ground_truth": "The Helix X1 Pro is $999.99 and is the premium flagship phone with advanced camera and performance features. The Helix X1 is $799.99 and offers core flagship features at a lower price.",
       "sources": [
         "Helix X1 Pro [HX-PH-001]",
