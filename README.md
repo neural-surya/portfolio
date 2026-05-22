@@ -1,4 +1,4 @@
-# HelixBot LLM Testing Portfolio
+# LLM Testing Portfolio
 
 HelixBot is a retail AI assistant used as the system under test for LLM quality, safety, red-team, and RAG evaluation. This portfolio repo is designed so reviewers can run the app through a public Docker image, then execute the test suites from the repository.
 
