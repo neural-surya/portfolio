@@ -55,6 +55,22 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:
 .snav-item:hover .snav-label{opacity:.45;color:var(--text-m)}
 .snav-item.active .snav-label{opacity:1;color:var(--text-m)}
 
+/* HERO TOOLS */
+.hero-tools{margin-bottom:44px}
+.hero-tools-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--text-d);margin-bottom:18px;
+  display:flex;align-items:center;gap:14px;justify-content:center}
+.hero-tools-label::before,.hero-tools-label::after{
+  content:'';height:1px;width:60px;background:var(--border)}
+.hero-tools-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.htool{display:flex;align-items:center;gap:10px;padding:10px 16px;
+  background:var(--surface);border:1px solid var(--border);
+  border-left-width:3px;border-radius:10px;
+  transition:border-color .2s,transform .2s,background .2s;cursor:default}
+.htool:hover{transform:translateY(-2px);background:var(--surface2)}
+.htool svg{width:26px;height:26px;border-radius:6px;flex-shrink:0}
+.htool span{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap}
+
 /* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:80px 40px;
   background:radial-gradient(ellipse at 50% -10%,#0f1f3d 0%,var(--bg) 65%);
@@ -411,6 +427,90 @@ code{font-family:var(--mono);font-size:11px;background:var(--surface2);
         <div class="stat-lbl">CI/CD Gates</div>
       </div>
     </div>
+
+    <!-- TOOL STACK -->
+    <div class="hero-tools">
+      <div class="hero-tools-label">Built with</div>
+      <div class="hero-tools-row">
+
+        <!-- PromptFoo -->
+        <div class="htool" style="border-left-color:#818cf8">
+          <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="34" rx="8" fill="#1e1033"/>
+            <path d="M9 10h8.5c2.5 0 4.5 2 4.5 4.5S20 19 17.5 19H13v5H9V10z" fill="#818cf8"/>
+            <rect x="13" y="14" width="4.2" height="1.8" rx=".9" fill="#312e81"/>
+          </svg>
+          <span>PromptFoo</span>
+        </div>
+
+        <!-- RAGAS -->
+        <div class="htool" style="border-left-color:#6366f1">
+          <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="34" rx="8" fill="#0f0a2e"/>
+            <rect x="5"  y="22" width="4" height="7" rx="1" fill="#818cf8"/>
+            <rect x="11" y="17" width="4" height="12" rx="1" fill="#a5b4fc"/>
+            <rect x="17" y="19" width="4" height="10" rx="1" fill="#6366f1"/>
+            <rect x="23" y="13" width="4" height="16" rx="1" fill="#4f46e5"/>
+            <line x1="4" y1="29" x2="30" y2="29" stroke="#312e81" stroke-width="1"/>
+          </svg>
+          <span>RAGAS</span>
+        </div>
+
+        <!-- GitHub Actions -->
+        <div class="htool" style="border-left-color:#6e7681">
+          <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="34" rx="8" fill="#161b22"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M17 5C10.37 5 5 10.37 5 17c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4 1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58C25.56 26.8 29 22.3 29 17c0-6.63-5.37-12-12-12z" fill="white"/>
+          </svg>
+          <span>GitHub Actions</span>
+        </div>
+
+        <!-- Python -->
+        <div class="htool" style="border-left-color:#3776ab">
+          <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="34" rx="8" fill="#1a2a3a"/>
+            <!-- top snake (blue) -->
+            <path d="M17 5.5c-3.6 0-5.8 1.6-5.8 4v1.8h5.8v.7H9c-1.5 0-2.8 1.1-2.8 3.9s1.3 3.9 2.8 3.9h1.7V18c0-1.6 1.5-3 3.6-3h5c2 0 3.4-1.4 3.4-3V9.5c0-2.4-2.2-4-5.7-4zm-1.4 1.9c.7 0 1.3.6 1.3 1.3s-.6 1.3-1.3 1.3-1.3-.6-1.3-1.3.6-1.3 1.3-1.3z" fill="#3776ab"/>
+            <!-- bottom snake (yellow) -->
+            <path d="M17 28.5c3.6 0 5.8-1.6 5.8-4v-1.8H17v-.7H25c1.5 0 2.8-1.1 2.8-3.9s-1.3-3.9-2.8-3.9h-1.7V16c0 1.6-1.5 3-3.6 3h-5c-2 0-3.4 1.4-3.4 3v3.5c0 2.4 2.2 4 5.7 4zm1.4-1.9c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3 1.3.6 1.3 1.3-.6 1.3-1.3 1.3z" fill="#ffd343"/>
+          </svg>
+          <span>Python</span>
+        </div>
+
+        <!-- Docker -->
+        <div class="htool" style="border-left-color:#1d63ed">
+          <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="34" rx="8" fill="#003f8c"/>
+            <!-- container grid -->
+            <rect x="5"  y="9"  width="6" height="5" rx="1" fill="white" opacity=".85"/>
+            <rect x="13" y="9"  width="6" height="5" rx="1" fill="white" opacity=".85"/>
+            <rect x="5"  y="16" width="6" height="5" rx="1" fill="white" opacity=".85"/>
+            <rect x="13" y="16" width="6" height="5" rx="1" fill="white" opacity=".85"/>
+            <rect x="21" y="16" width="6" height="5" rx="1" fill="white" opacity=".85"/>
+            <!-- whale spout -->
+            <path d="M25 12 Q28 8 26 6" stroke="#1d9bf0" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span>Docker</span>
+        </div>
+
+        <!-- OpenAI -->
+        <div class="htool" style="border-left-color:#10a37f">
+          <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="34" height="34" rx="8" fill="#0d1117"/>
+            <!-- OpenAI flower: 6 overlapping rotated ellipses -->
+            <g transform="translate(17,17)" fill="none" stroke="white" stroke-width="1.6">
+              <ellipse rx="7" ry="3.2"/>
+              <ellipse rx="7" ry="3.2" transform="rotate(60)"/>
+              <ellipse rx="7" ry="3.2" transform="rotate(120)"/>
+            </g>
+            <circle cx="17" cy="17" r="2.2" fill="white"/>
+          </svg>
+          <span>OpenAI</span>
+        </div>
+
+      </div>
+    </div>
+
     <div class="scroll-hint">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       Scroll to explore
